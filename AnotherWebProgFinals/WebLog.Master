@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebLog.master.cs" Inherits="AnotherWebProgFinals.WebLog" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Web Programming Finals|City of General Trias">
+    <meta name="keywords" content="gentri, general trias, cavite, history of general trias, ony ferrer">
+    <title>City of General Trias| <%:Page.Title %></title>
+
+    <!--CSS-->
+    <link href="/css/materialize.min.css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.min.css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style-fullscreen.css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/perfect-scrollbar.css" rel="stylesheet" media="screen,projection" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="homepage-bg col s12">
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <script src="/js/jquery-1.11.2.min.js"></script>
+        <script src="/js/materialize.min.js"></script>
+        <script src="/js/perfect-scrollbar.min.js"></script>
+        <script src="/js/plugins.min.js"></script>
+    </form>
+
+    <div class="col s12">
+        <div class="divider" style="height: 1px; background-color: darkgray; margin-top: 3%; margin-left: 4%; margin-right: 4%"></div>
+    </div>
+    <div class="footer-copyright" style="position: inherit; margin-bottom: 0; margin-top: 1%">
+        <center><label style="color:black">Copy &copy; 2016 | Buenavides, Labtic, Pizarra</label></center>
+    </div>
+</body>
+</html>
