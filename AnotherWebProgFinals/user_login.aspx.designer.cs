@@ -13,21 +13,30 @@ namespace AnotherWebProgFinals {
     public partial class user_login {
         
         /// <summary>
-        /// CityLogoDataSource control.
+        /// CityLogo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CityLogoDataSource;
+        protected global::System.Web.UI.WebControls.Image CityLogo;
         
         /// <summary>
-        /// CityLogoFormView control.
+        /// loginForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView CityLogoFormView;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginForm;
+        
+        /// <summary>
+        /// registerForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl registerForm;
     }
 }

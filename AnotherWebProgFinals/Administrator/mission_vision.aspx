@@ -45,7 +45,7 @@
             <h4>Edit Vision</h4>
             <div class="col s12">
                 <div class="input-field col s12">
-                    <asp:TextBox ID="EdittxtVision" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("txtVision") %>'></asp:TextBox>
+                    <asp:TextBox ID="EdittxtVision" TextMode="MultiLine" CssClass="active materialize-textarea" runat="server" Text='<%# Bind("txtVision") %>'></asp:TextBox>
                     <label for="textarea1">City Vision</label>
                 </div>
             </div>

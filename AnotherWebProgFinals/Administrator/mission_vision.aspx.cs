@@ -100,7 +100,7 @@ namespace AnotherWebProgFinals.Administrator
 
             EdittxtMission.Text = mission;
 
-            Response.Redirect("~/Administrator/mission_vision.aspx");
+           Response.Redirect("~/Administrator/mission_vision.aspx");
         }
 
         protected void MissionDeleteButton_Click(object sender, EventArgs e)

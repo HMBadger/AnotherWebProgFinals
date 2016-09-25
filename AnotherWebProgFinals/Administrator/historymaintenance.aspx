@@ -55,17 +55,17 @@
         <div class="modal-content">
             <h4>Edit History</h4>
             <div class="col s12">
-                <div class="col s12">
+                <div class="input-field col s12">
                     <label for="textarea1">Date</label>
                     <asp:TextBox ID="EditdtHistory" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("dtHistory") %>'></asp:TextBox>
                 </div>
 
-                <div class="col s12">
+                <div class="input-field col s12">
                     <label for="textarea1">History Title</label>
                     <asp:TextBox ID="EditstrHistoryTitle" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("strHistoryTitle") %>'></asp:TextBox>
                 </div>
 
-                <div class="col s12">
+                <div class="input-field col s12">
                     <label for="textarea1">History Detail</label>
                     <asp:TextBox ID="EdittxtHistory" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("txtHistory") %>'></asp:TextBox>
                 </div>

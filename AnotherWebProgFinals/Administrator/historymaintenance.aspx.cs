@@ -24,18 +24,17 @@ namespace AnotherWebProgFinals.Administrator
                 {
                     while (reader.Read())
                     {
-                        string readDate = (String)reader["strDate"];
-                        string readTitle = (String)reader["strHistoryTitle"];
-                        string readDetail = (String)reader["txtHistory"];
-                        EditdtHistory.Text = readDate;
+                        dateLabel.Text = (String)reader["strDate"];
+                        titleLabel.Text = (String)reader["strHistoryTitle"];
+                        detailLabel.Text = (String)reader["txtHistory"];
+
+                      /**  EditdtHistory.Text = readDate;
                         EditstrHistoryTitle.Text = readTitle;
                         EdittxtHistory.Text = readDetail;
+
                         DelDate.Text = readDate;
                         DelTitle.Text = readTitle;
-                        DelText.Text = readDetail;
-                        dateLabel.Text = readDate;
-                        titleLabel.Text = readTitle;
-                        detailLabel.Text = readDetail;
+                        DelText.Text = readDetail;**/
                     }
                 }
                 catch (Exception ex)
@@ -80,12 +79,12 @@ namespace AnotherWebProgFinals.Administrator
             cmd.Connection = con;
 
             SqlDataAdapter da = new SqlDataAdapter();
-            da.UpdateCommand = new SqlCommand(@"Update [CityHistory] Set [strDate] = @date, [strHistoryTitle] = @title, [txtHistory] = @detail Where HistoryID = " + 1, con);
+            da.UpdateCommand = new SqlCommand(@"Update [CityHistory] Set strDate = @strDate, strHistoryTitle = @strHistoryTitle, txtHistory = @txtHistory Where HistoryID = " + 1, con);
 
 
-            da.UpdateCommand.Parameters.Add("@date", SqlDbType.VarChar).Value = date;
-            da.UpdateCommand.Parameters.Add("@title", SqlDbType.VarChar).Value = title;
-            da.UpdateCommand.Parameters.Add("@detail", SqlDbType.VarChar).Value = detail;
+            da.UpdateCommand.Parameters.Add("@strDate", SqlDbType.VarChar).Value = date;
+            da.UpdateCommand.Parameters.Add("@strHistoryTitle", SqlDbType.VarChar).Value = title;
+            da.UpdateCommand.Parameters.Add("@txtHistory", SqlDbType.VarChar).Value = detail;
 
             con.Open();
             da.UpdateCommand.ExecuteNonQuery();
@@ -108,7 +107,7 @@ namespace AnotherWebProgFinals.Administrator
             cmd.Connection = con;
 
             SqlDataAdapter adap = new SqlDataAdapter();
-            adap.DeleteCommand = new SqlCommand(@"Update [CityHistory] Set [strDate] = @strDate, [strHistoryTitle] = @strHistoryTitle, [txtHistory] = @txtHistory Where HistoryID = " + 1, con);
+            adap.DeleteCommand = new SqlCommand(@"Update [CityHistory] Set strDate = @strDate, strHistoryTitle = @strHistoryTitle, txtHistory = @txtHistory Where HistoryID = " + 1, con);
             string newDate = "";
             string newTitle = "";
             string newDetail = "";
