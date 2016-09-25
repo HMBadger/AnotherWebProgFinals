@@ -28,10 +28,10 @@ function Dropify(element, options) {
         allowedFormats: ['portrait', 'square', 'landscape'],
         allowedFileExtensions: ['*'],
         messages: {
-            'default': 'Drag and drop a file here or click',
+            'default': 'Drag and drop a file here or click to upload',
             'replace': 'Drag and drop or click to replace',
             'remove':  'Remove',
-            'error':   'Ooops, something wrong appended.'
+            'error':   'Oops. Something went wrong!'
         },
         error: {
             'fileSize': 'The file size is too big ({{ value }} max).',
