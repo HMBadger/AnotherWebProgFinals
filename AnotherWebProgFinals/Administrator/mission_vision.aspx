@@ -23,12 +23,12 @@
     <div id="VisionItemPlaceholderContainer" runat="server" class="center">
         <div class="container">
             <div class="col-md-2"></div>
-            <div class="">
+            <div class="" style="padding:6%; padding-top:2%">
                 <asp:ListView ID="CityVisionListView" runat="server" DataKeyNames="VisionID" DataSourceID="CityVisionDataSource">
                     <EditItemTemplate>
-
+                        <div class="z-depth-2" style="padding: 5%; padding-top:2%; border:3px gray solid">
                         <div class="center">
-                            <asp:Label ID="lblEditCityVision" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtEditCityVision">City Vision: </asp:Label><br />
+                            <asp:Label ID="lblEditCityVision" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtEditCityVision"></asp:Label><br />
                             <div class="col-md-12 col-sm-12" style="text-align: center;">
                                 <asp:TextBox ID="txtEditCityVision" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("txtVision") %>' /><br />
                             </div>
@@ -39,13 +39,13 @@
                             <asp:Button ID="UpdateVisionButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
                             <asp:Button ID="CancelVisionButton" runat="server" class="waves-effect green btn center-align" CommandName="Cancel" Text="Cancel" />
                         </div>
-                        
+                        </div>
                     </EditItemTemplate>
 
                     <ItemTemplate>
-
+                        <div class="z-depth-2" style="padding: 5%; padding-top:2%; border:3px gray solid">
                         <div class="form-group">
-                            <asp:Label ID="lblPrevCityVision" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtCityVisionPrev">City Vision: </asp:Label><br />
+                            <asp:Label ID="lblPrevCityVision" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtCityVisionPrev"></asp:Label><br />
                             <div class="col-md-12 col-sm-12" style="text-align: justify; padding-left: 5%; padding-right: 5%">
                                 <asp:Label ID="txtCityVisionPrev" CssClass="materialize-textarea" runat="server" Text='<%# Eval("txtVision").ToString().Replace(Environment.NewLine,"<br />") %>' /><br />
                             </div>
@@ -56,7 +56,7 @@
                         <br />
                         
                         <asp:Button ID="EditVisionButton" class="waves-effect green btn center-align" runat="server" CommandName="Edit" Text="Edit" />
-                     
+                     </div>
                     </ItemTemplate>
                 </asp:ListView>
 
@@ -86,10 +86,10 @@
     <div id="MissionItemPlaceholderContainer" runat="server" class="center">
         <div class="container">
             <div class="col-md-2"></div>
-            <div class="">
+            <div class="" style="padding:6%; padding-top:2%">
                 <asp:ListView ID="CityMissionListView" runat="server" DataKeyNames="MissionID" DataSourceID="CityMissionDataSource">
                     <EditItemTemplate>
-
+                        <div class="z-depth-2" style="padding: 5%; padding-top:2%; border:3px gray solid">
                         <div class="center">
                             <asp:Label ID="lblEditCityMission" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtEditCityMission">City Vision: </asp:Label><br />
                             <div class="col-md-12 col-sm-12" style="text-align: center;">
@@ -102,13 +102,13 @@
                             <asp:Button ID="UpdateMissionButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
                             <asp:Button ID="CancelMissionButton" runat="server" class="waves-effect green btn center-align" CommandName="Cancel" Text="Cancel" />
                         </div>
-                        
+                       </div>
                     </EditItemTemplate>
 
                     <ItemTemplate>
-
+                        <div class="z-depth-2" style="padding: 5%; padding-top:2%; border:3px gray solid">
                         <div class="form-group">
-                            <asp:Label ID="lblPrevCityMission" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtCityMissionPrev">City Vision: </asp:Label><br />
+                            <asp:Label ID="lblPrevCityMission" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtCityMissionPrev"></asp:Label><br />
                             <div class="col-md-12 col-sm-12" style="text-align: justify; padding-left: 5%; padding-right: 5%">
                                 <asp:Label ID="txtCityMissionPrev" CssClass="materialize-textarea" runat="server" Text='<%# Eval("txtMission").ToString().Replace(Environment.NewLine,"<br />") %>' /><br />
                             </div>
@@ -119,7 +119,7 @@
                         <br />
                         
                         <asp:Button ID="EditMissionButton" class="waves-effect green btn center-align" runat="server" CommandName="Edit" Text="Edit" />
-                     
+                     </div>
                     </ItemTemplate>
                 </asp:ListView>
 
