@@ -13,129 +13,57 @@ namespace AnotherWebProgFinals.Administrator {
     public partial class mission_vision {
         
         /// <summary>
-        /// visionLabel control.
+        /// CityVisionDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label visionLabel;
+        protected global::System.Web.UI.WebControls.SqlDataSource CityVisionDataSource;
         
         /// <summary>
-        /// EdittxtVision control.
+        /// VisionItemPlaceholderContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EdittxtVision;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl VisionItemPlaceholderContainer;
         
         /// <summary>
-        /// VisionCancelButton control.
+        /// CityVisionListView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VisionCancelButton;
+        protected global::System.Web.UI.WebControls.ListView CityVisionListView;
         
         /// <summary>
-        /// VisionUpdateButton control.
+        /// CityMissionDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VisionUpdateButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource CityMissionDataSource;
         
         /// <summary>
-        /// DeltxtVision control.
+        /// MissionItemPlaceholderContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DeltxtVision;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MissionItemPlaceholderContainer;
         
         /// <summary>
-        /// VisionCloseButton control.
+        /// CityMissionListView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VisionCloseButton;
-        
-        /// <summary>
-        /// VisionDeleteButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VisionDeleteButton;
-        
-        /// <summary>
-        /// missionLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label missionLabel;
-        
-        /// <summary>
-        /// EdittxtMission control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EdittxtMission;
-        
-        /// <summary>
-        /// MissionCancelButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MissionCancelButton;
-        
-        /// <summary>
-        /// MissionUpdateButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MissionUpdateButton;
-        
-        /// <summary>
-        /// DeltxtMission control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DeltxtMission;
-        
-        /// <summary>
-        /// MissionCloseButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MissionCloseButton;
-        
-        /// <summary>
-        /// MissionDeletButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MissionDeletButton;
+        protected global::System.Web.UI.WebControls.ListView CityMissionListView;
     }
 }

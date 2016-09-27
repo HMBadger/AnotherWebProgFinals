@@ -13,33 +13,6 @@ namespace AnotherWebProgFinals.Administrator {
     public partial class logo_banner {
         
         /// <summary>
-        /// EditCityLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image EditCityLogo;
-        
-        /// <summary>
-        /// btnUploadLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUploadLogo;
-        
-        /// <summary>
-        /// cityLogoFileUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload cityLogoFileUpload;
-        
-        /// <summary>
         /// EditCityBanner control.
         /// </summary>
         /// <remarks>
@@ -47,6 +20,15 @@ namespace AnotherWebProgFinals.Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image EditCityBanner;
+        
+        /// <summary>
+        /// cityBannerFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload cityBannerFileUpload;
         
         /// <summary>
         /// btnUploadBanner control.
@@ -58,12 +40,30 @@ namespace AnotherWebProgFinals.Administrator {
         protected global::System.Web.UI.WebControls.Button btnUploadBanner;
         
         /// <summary>
-        /// cityBannerFileUpload control.
+        /// EditCityLogo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload cityBannerFileUpload;
+        protected global::System.Web.UI.WebControls.Image EditCityLogo;
+        
+        /// <summary>
+        /// cityLogoFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload cityLogoFileUpload;
+        
+        /// <summary>
+        /// btnUploadLogo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUploadLogo;
     }
 }

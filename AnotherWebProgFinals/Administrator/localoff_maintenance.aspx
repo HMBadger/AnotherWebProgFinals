@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col m12">
 
-                <table class="table-responsive" style="width: 100%" id="tblOfficials" runat="server">
+                <table class="table-responsive" style="width: 100%">
                     <thead>
                         <tr>
                             <th class="span_h2_green center" style="font-weight: 400">
@@ -29,7 +29,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tblBody" runat="server">
                         <tr>
                             <td class="center" style="width: 20%">
                                 <asp:Label ID="officialName" runat="server"></asp:Label></td>

@@ -3,17 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:SqlDataSource ID="CityBannerDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [strBannerPath] FROM [LogoBanner]"></asp:SqlDataSource>
-    <asp:FormView ID="CityBannerFormView" runat="server" DataSourceID="CityBannerDataSource">
-        <ItemTemplate>
-            <img src='../<%# Eval("strBannerPath") %>' style="width: 100%; height: 100%; margin-bottom: 0; margin-top: 0" />
-        </ItemTemplate>
-    </asp:FormView>
+    <asp:Image ID="CityBanner" Style="width: 100%; height: 100%; margin-bottom: 0; margin-top: 0" runat="server" />
     <div class="row dirtywhite">
         <div class="slider">
             <ul class="slides">
                 <li>
-                    <img src="http://lorempixel.com/580/250/nature/1">
+                    <img src="../images/1.jpg">
                     <!-- random image -->
                     <div class="caption center-align">
                         <h3>This is our big Tagline!</h3>
@@ -21,7 +16,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/580/250/nature/2">
+                    <img src="../images/2.jpg">
                     <!-- random image -->
                     <div class="caption left-align">
                         <h3>Left Aligned Caption</h3>
@@ -29,7 +24,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/580/250/nature/3">
+                    <img src="../images/3.jpg">
                     <!-- random image -->
                     <div class="caption right-align">
                         <h3>Right Aligned Caption</h3>
@@ -37,7 +32,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/580/250/nature/4">
+                    <img src="../images/4.jpg">
                     <!-- random image -->
                     <div class="caption center-align">
                         <h3>This is our big Tagline!</h3>

@@ -26,6 +26,7 @@ namespace AnotherWebProgFinals.Administrator
                 {
                     while (reader.Read())
                     {
+
                         officialName.Text = (String)reader["strFullName"];
                         officialPosition.Text = (String)reader["strAuthLevel"];
                         string offImage = "../" + (String)reader["strImagePath"];

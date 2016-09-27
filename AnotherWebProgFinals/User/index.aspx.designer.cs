@@ -13,22 +13,13 @@ namespace AnotherWebProgFinals.User {
     public partial class index {
         
         /// <summary>
-        /// CityBannerDataSource control.
+        /// CityBanner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CityBannerDataSource;
-        
-        /// <summary>
-        /// CityBannerFormView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView CityBannerFormView;
+        protected global::System.Web.UI.WebControls.Image CityBanner;
         
         /// <summary>
         /// CityMissionDataSource control.

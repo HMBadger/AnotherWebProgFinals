@@ -13,13 +13,13 @@ namespace AnotherWebProgFinals.Administrator {
     public partial class localoff_maintenance {
         
         /// <summary>
-        /// tblOfficials control.
+        /// tblBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblOfficials;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tblBody;
         
         /// <summary>
         /// officialName control.
