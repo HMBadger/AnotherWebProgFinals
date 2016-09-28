@@ -22,15 +22,28 @@ namespace AnotherWebProgFinals.Administrator
                 SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
+                tblBody.InnerHtml = "";
                 try
                 {
                     while (reader.Read())
                     {
-
+                        /**
                         officialName.Text = (String)reader["strFullName"];
                         officialPosition.Text = (String)reader["strAuthLevel"];
                         string offImage = "../" + (String)reader["strImagePath"];
-                        OfficialImage.ImageUrl = offImage;
+                        OfficialImage.ImageUrl = offImage;**/
+
+                        string strN = (String)reader["strFullName"];
+                        string strPos = (String)reader["strAuthLevel"];
+                        string offImage = "../" + (String)reader["strImagePath"];
+                        
+
+                        String strNum = "" + reader.GetValue(0) + "";
+                        String strName = string.Concat(strNum, strN);
+                        String strPosition = string.Concat(strNum, strPos);
+                        String strImage = string.Concat(strNum, offImage);
+
+                        tblBody.InnerHtml = "<tr><td class='center'>" + strName +"</td><td class= 'center'>"+ strPosition + "</td><td class = 'center'>"+strImage+"</td><td class='center'><a class ='waves-effect waves-light btn green modal-trigger' href=''>Edit</a></td>" + "<td class= 'center'><a class ='waves-effect waves-light btn green modal-trigger' href=''>Delete</a></td></tr>";
                     }
 
                 }

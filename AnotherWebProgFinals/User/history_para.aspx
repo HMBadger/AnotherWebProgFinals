@@ -7,11 +7,8 @@
     <asp:SqlDataSource ID="CityHistoryDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [strDate], [strHistoryTitle], [txtHistory] FROM [CityHistory]"></asp:SqlDataSource>
     <asp:FormView ID="CityHistoryFormView" runat="server" DataSourceID="CityHistoryDataSource">
         <ItemTemplate>
-            <h4 style="text-align: center; color: #388E3C" class="center">
-                <%# Eval("strDate") %> <br /><%# Eval("strHistoryTitle") %>
-            </h4>
             <p style="text-align: center">
-                <%# Eval("txtHistory") %>
+                <%# Eval("txtHistory").ToString().Replace(Environment.NewLine,"<br />") %>
             </p>
             </div>
         </ItemTemplate>

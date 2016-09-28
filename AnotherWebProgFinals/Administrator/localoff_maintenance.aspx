@@ -30,19 +30,6 @@
                         </tr>
                     </thead>
                     <tbody id="tblBody" runat="server">
-                        <tr>
-                            <td class="center" style="width: 20%">
-                                <asp:Label ID="officialName" runat="server"></asp:Label></td>
-                            <td class="center" style="width: 20%">
-                                <asp:Label ID="officialPosition" runat="server"></asp:Label>
-                            </td>
-                            <td class="center" style="width: 30%">
-                                <asp:Image ID="OfficialImage" Style="width: 50%; height: 50%" runat="server" /></td>
-                            <td class="center" style="width: 15%">
-                                <a class="waves-effect waves-light btn green modal-trigger" href="#editHistory">Edit</a></td>
-                            <td class="center" style="width: 15%">
-                                <a class="waves-effect waves-light btn green modal-trigger" href="#delHistory">Delete</a></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

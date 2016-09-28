@@ -79,6 +79,7 @@
       <DependentUpon>webprog.mdf</DependentUpon>
     </Content>
     <Content Include="css\blog\style.css" />
+    <Content Include="css\datatables.min.css" />
     <Content Include="css\dropify.css" />
     <Content Include="css\mycustomcss.css" />
     <Content Include="css\page-center.css" />

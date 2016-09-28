@@ -4,50 +4,135 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <h1 class="center" style="font-weight: 600; color: #388E3C">ANNOUNCEMENTS MAINTENANCE</h1>
-        <div class="row">
-            <div class="col m12">
-                <table class="table-responsive" style="width: 98%">
-                    <thead>
+        <h3 class="center" style="font-weight: 600; color: #388E3C">ANNOUNCEMENTS MAINTENANCE</h3>
+        <div class="row" style="margin-top: 8%">
+            <div class="right col s12 m7" style="border: 2px solid transparent; margin-bottom: 7%">
+                <table class="table-responsive z-depth-2" style="width: 98%; margin-bottom: 50px; padding: 3%" border="1">
+                    <thead style="background-color: #74ea81">
                         <tr>
                             <th class="span_h2_green center" style="font-weight: 400">
-                                <h4>Announcement Title</h4>
+                                <h6>Title</h6>
                             </th>
                             <th class="span_h2_green center" style="font-weight: 400">
-                                <h4>Date(From)</h4>
+                                <h6>Date Posted</h6>
                             </th>
                             <th class="span_h2_green center" style="font-weight: 400">
-                                <h4>Date(To)</h4>
+                                <h6>Details</h6>
                             </th>
                             <th class="span_h2_green center" style="font-weight: 400">
-                                <h4>Details</h4>
-                            </th>
-                            <th style="color: white" class="center">
-                                <h4>Edit</h4>
-                            </th>
-                            <th style="color: white" class="center">
-                                <h4>Delete</h4>
+                                <h6>Actions</h6>
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="center" style="width: 10%">Road Closure due to Pipeline Repair
-                            </td>
-                            <td class="center">September 24, 2016
-                            </td>
-                            <td class="center">September 30, 2016
-                            </td>
-                            <td class="center">Due to a broken pipeline, DPWH will conduct a pipeline repair from September 24, 2016 to September 30, 2016. Expect heavy traffic.
-                            </td>
-                            <td>
-                                <a class="waves-effect waves-light btn green modal-trigger" href="#editVision">Edit</a></td>
-                            <td>
-                                <a class="waves-effect waves-light btn green modal-trigger" href="#delVision">Delete</a></td>
-                        </tr>
-                    </tbody>
+                    <asp:ListView ID="ListView1" runat="server" DataSourceID="CityAnnouncementsDataSource" DataKeyNames="AnnounceID">
+                        <ItemTemplate>
+                            <tbody>
+                                <tr>
+                                    <td class="center" style="width: 10%">
+                                        <asp:TextBox ID="announceId"  runat="server"></asp:TextBox>
+                                    </td>
+                                    <td class="center" style="width: 10%">
+                                        <%# Eval("Announce_Title") %>
+                                    </td>
+                                    <td class="center">
+                                        <%# Eval("Announce_DatePosted") %>
+                                    </td>
+                                    <td class="center">
+                                        <%# Eval("Announce_Details").ToString().Replace(Environment.NewLine,"<br />") %>
+                                    </td>
+                                    <td class="center">
+                                        <asp:Button ID="EditButton" class="waves-effect green btn center-align" runat="server" CommandName="Edit" Text="Edit" />
+                                        <asp:Button ID="DeleteButton" class="waves-effect green btn center-align" runat="server" OnClick="DeleteButton_Click" Text="Delete" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <tbody>
+                                <tr>
+                                    <td class="center" style="width: 10%">
+                                        <asp:TextBox ID="txtTitle" runat="server" Text='<%# Bind("Announce_Title") %>'></asp:TextBox>
+                                    </td>
+                                    <td class="center">
+                                        <asp:TextBox ID="txtDate" runat="server" Text='<%# Bind("Announce_DatePosted") %>' CssClass="datepicker"></asp:TextBox>
+                                    </td>
+                                    <td class="center">
+                                        <asp:TextBox ID="txtDetails" runat="server" Text='<%# Bind("Announce_Details") %>'></asp:TextBox>
+                                    </td>
+                                    <td class="center">
+                                        <asp:Button ID="UpdateButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
+                                        <asp:Button ID="CancelButton" runat="server" class="waves-effect green btn center-align" CommandName="Cancel" Text="Cancel" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </EditItemTemplate>
+                    </asp:ListView>
                 </table>
+
+
+
+
+                <asp:SqlDataSource ID="CityAnnouncementsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
+                    InsertCommand="INSERT INTO [CityAnnouncements] ([Announce_Title], [Announce_DatePosted], [Announce_Details], [Announce_IsActive]) VALUES (@Announce_Title, @Announce_DatePosted, @Announce_Details, @Announce_IsActive)" OldValuesParameterFormatString="old_{0}"
+                    SelectCommand="SELECT * FROM [CityAnnouncements]" UpdateCommand="UPDATE [CityAnnouncements] SET [Announce_Title] = @Announce_Title, [Announce_DatePosted] = @Announce_DatePosted, [Announce_Details] = @Announce_Details WHERE [AnnounceID] = @old_AnnounceID"
+                    DeleteCommand="DELETE FROM [CityAnnouncements] WHERE [AnnounceID] = @old_AnnounceID">
+                    <UpdateParameters>
+                        <asp:Parameter Name="Announce_Title" Type="String" />
+                        <asp:Parameter Name="Announce_DatePosted" Type="String" />
+                        <asp:Parameter Name="Announce_Details" Type="String" />
+                        <asp:Parameter Name="old_AnnounceID" Type="Int32" />
+                        <asp:Parameter Name="old_Announce_Title" Type="String" />
+                        <asp:Parameter Name="old_Announce_DatePosted" Type="String" />
+                        <asp:Parameter Name="old_Announce_Details" Type="String" />
+                    </UpdateParameters>
+                    <DeleteParameters>
+                        <asp:Parameter Name="AnnounceID" Type="Int32" />
+                        <asp:Parameter Name="old_AnnounceID" Type="Int32" />
+                    </DeleteParameters>
+                </asp:SqlDataSource>
             </div>
+            <!--end ng table to bes-->
+
+
+            <!--Form for Adding announcements-->
+                    <div class="left col s12 m5">
+                        <div class="col s12 m12 z-depth-2" style="background-color: #6cd068; padding: 3%; margin-top: 0.50%">
+                            <center><b>Add New Announcement</b></center>
+                        </div>
+                        <div class="col s12 z-depth-2" style="padding: 5%">
+                            <div class="col s4" style="margin-top: 3%">
+                                <h6 class="center" style="color: green;"><b>Announcement Title</b></h6>
+                            </div>
+                            <div class="col s8">
+                                <asp:TextBox ID="Announce_Title" runat="server" ></asp:TextBox>
+                            </div>
+                            <div class="col s12">
+                                <h6 style="color: green;"><b>Details for the Announcement:</b></h6>
+                            </div>
+                            <div class="col s12" style="padding-left: 5%; padding-right: 5%">
+                                <asp:TextBox ID="Announce_Details" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" /><br />
+                            </div>
+                            <!--<input type="date" value="DateTime.Now()" name="Announce_DatePosted" hidden />-->
+                           <!-- <input type="int" value="1" name="Announce_IsActive" hidden /> -->
+
+                            <div class="col s12">
+                                <div class="right col s3">
+                                    <asp:Button ID="AddButton" CssClass="btn green lighten-2" Style="color: black" runat="server" OnClick="AddButton_Click" Text="Add" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            <!--end of form for announcement-->
+
+
         </div>
+
+        <!--ADD BUTTON-->
+        <!-- <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
+            <a class="btn-floating btn-large">
+                <i class="mdi-content-add"></i>
+            </a>
+        </div>-->
     </div>
 </asp:Content>
