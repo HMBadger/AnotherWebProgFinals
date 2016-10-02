@@ -15,7 +15,7 @@
     <!--CSS-->
     <link href="/css/materialize.min.css" rel="stylesheet" media="screen,projection" />
     <link href="/css/style.min.css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/style-fullscreen.css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style-horizontal.css" rel="stylesheet" media="screen,projection" />
     <link href="/css/perfect-scrollbar.css" rel="stylesheet" media="screen,projection" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -25,111 +25,55 @@
     <form id="form1" runat="server">
 
         <header id="header" class="page-topbar">
-            <!-- start header nav-->
+            <!--header nav-->
             <div class="navbar-fixed">
                 <nav class="navbar-color">
                     <div class="nav-wrapper">
                         <ul class="left">
                             <li>
-                                <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1 center">City of General Trias</a></h1>
+                                <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1">General Trias</a>
+                                    <span class="logo-text">General Trias</span></h1>
                             </li>
+                        </ul>
+                        <!--search box-->
+                        <div class="header-search-wrapper hide-on-med-and-down">
+                            <i class="mdi-action-search"></i>
+                            <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search General Trias" />
+                        </div>
+
+                        <!--user controls-->
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#" class="waves-effect waves-block waves-light notification-button" data-activates="#">
+                                <i class="mdi-action-account-circle"></i>
+                            </a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!--second navbar-->
+
+                <nav id="horizontal-nav" class="white hide-on-med-and-down">
+                    <div class="nav-wrapper">
+                        <ul id="ul-horizontal-nav" class="left hide-on-med-and-down">
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-home"></i><span>Home</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>City History</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Municipal Profile</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Legislation</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-maps-local-attraction"></i><span>Local Officials</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Department Directory</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Component Barangays</span></a></li>
+                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Tourism</span></a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
-            <!-- end header nav-->
         </header>
-        <!-- END HEADER -->
+        <!--end navbarss-->
 
-        <!-- START MAIN -->
-        <div id="main">
-            <!-- START WRAPPER -->
-            <div class="wrapper">
-
-                <!-- START LEFT SIDEBAR NAV-->
-                <aside id="left-sidebar-nav">
-                    <ul id="slide-out" class="side-nav leftside-navigation">
-                        <li class="user-details cyan darken-2">
-                            <div class="row">
-                                <div class="col col s4 m4 l4">
-                                    <img src="../images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
-                                </div>
-                                <div class="col col s8 m8 l8">
-                                    <ul id="profile-dropdown" class="dropdown-content">
-                                        <li><a href="#"><i class="mdi-action-face-unlock"></i>Profile</a>
-                                        </li>
-                                        <li><a href="#"><i class="mdi-action-settings"></i>Settings</a>
-                                        </li>
-                                        <li><a href="#"><i class="mdi-communication-live-help"></i>Help</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="mdi-action-lock-outline"></i>Lock</a>
-                                        </li>
-                                        <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i>Logout</a>
-                                        </li>
-                                    </ul>
-                                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                                    <p class="user-roal">Administrator</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="bold"><a href="index.aspx" class="waves-effect waves-cyan"><i class="mdi-action-home"></i>Home</a>
-                        </li>
-                        <li class="no-padding">
-                            <ul class="collapsible collapsible-accordion">
-                                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-info"></i>About General Trias</a>
-                                    <div class="collapsible-body">
-                                        <ul>
-                                            <li class="active"><a href="history_para.aspx">History</a>
-                                            </li>
-                                            <li><a href="#">Municipal Profile</a>
-                                            </li>
-                                            <li><a href="localofficials.aspx">Local Officials</a>
-                                            </li>
-                                            <li><a href="#">Legislation</a>
-                                            </li>
-                                            <li><a href="directory.aspx">Departments</a>
-                                            </li>
-                                            <li><a href="#">Component Barangays</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="no-padding">
-                            <ul class="collapsible collapsible-accordion">
-                                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-maps-local-attraction"></i>Tourism</a>
-                                    <div class="collapsible-body">
-                                        <ul>
-                                            <li><a href="#">Sites To See</a>
-                                            </li>
-                                            <li><a href="#">Things To Do</a>
-                                            </li>
-                                            <li><a href="#">Where To Stay</a>
-                                            </li>
-                                            <li><a href="#">Restaurants</a>
-                                            </li>
-                                            <li><a href="#">Festivities</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-phone"></i>Contact</a>
-                                </li>
-                                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-print-shop"></i>Services</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light green"><i class="mdi-navigation-menu"></i></a>
-                </aside>
-                <!-- END LEFT SIDEBAR NAV-->
-            </div>
-        </div>
-
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-
+        <section id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
         <footer class="page-footer green">
             <div class="container">
                 <div class="row">
@@ -170,6 +114,12 @@
         <script src="/js/materialize.min.js"></script>
         <script src="/js/perfect-scrollbar.min.js"></script>
         <script src="/js/plugins.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.slider').slider();
+            });
+        </script>
+
     </form>
 </body>
 </html>

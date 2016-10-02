@@ -13,7 +13,7 @@ namespace AnotherWebProgFinals.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string queryString = "SELECT strBannerPath FROM dbo.LogoBanner";
+            string queryString = "SELECT strBannerPath, strLogoPath FROM dbo.LogoBanner";
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["webprog"].ConnectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
@@ -24,7 +24,9 @@ namespace AnotherWebProgFinals.User
                     while (reader.Read())
                     {
                         string cityBanner = "../" + (String)reader["strBannerPath"];
+                        string cityLogo = "../" + (String)reader["strLogoPath"];
                         CityBanner.ImageUrl = cityBanner;
+                        CityLogo.ImageUrl = cityLogo;
                     }
                 }
                 catch(Exception ex)

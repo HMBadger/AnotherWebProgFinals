@@ -83,6 +83,7 @@
     <Content Include="css\dropify.css" />
     <Content Include="css\mycustomcss.css" />
     <Content Include="css\page-center.css" />
+    <Content Include="css\style-horizontal.css" />
     <Content Include="font\dropify\dropify.svg" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />

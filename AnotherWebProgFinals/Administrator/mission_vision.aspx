@@ -23,7 +23,6 @@
     <div id="VisionItemPlaceholderContainer" runat="server" class="center">
         <div class="container">
             <div class="col-md-2"></div>
-            <a href="mission_vision.aspx">mission_vision.aspx</a>
             <div class="" style="padding:6%; padding-top:2%">
                 <asp:ListView ID="CityVisionListView" runat="server" DataKeyNames="VisionID" DataSourceID="CityVisionDataSource">
                     <EditItemTemplate>

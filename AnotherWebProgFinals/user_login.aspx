@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col m6 s12 center">
                 <asp:Image ID="CityLogo" Style="width: 70%; height: 70%" runat="server" />
-                <h6 style="color:dimgray; font-style: italic" class="center">"Leading you to the future since 1904"</h6>
+                <h6 style="color:dimgray; font-style: italic" class="center">"Leading you a brighter future"</h6>
             </div>
 
             <div class="col m6 s12 center">
