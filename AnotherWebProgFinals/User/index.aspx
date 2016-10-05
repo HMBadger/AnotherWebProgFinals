@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
         .slider .indicators .indicator-item {
-            background-color: #666666;
+            background-color: #FFFFFF;
             border: 3px solid #ffffff;
             -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
             -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -13,7 +13,7 @@
         }
 
             .slider .indicators .indicator-item.active {
-                background-color: #ffffff;
+                background-color: #228B22;
             }
 
         .slider {
@@ -54,91 +54,66 @@
             </div>
             <!--slider-->
         </div>
-        <div class="col m5 center" hidden>
-            <asp:Image ID="CityLogo" Style="width: 50%; height: 50%" runat="server" />
-            <h6 style="color: dimgray; font-style: italic" class="center">"Disiplina, Wastong Serbisyo, Pag-asenso!"</h6>
-            <br />
-            <a href="http://www.accuweather.com/en/ph/general-trias/262682/weather-forecast/262682" class="aw-widget-legal"></a>
-            <div id="awcc1475394989181" class="aw-widget-current" data-locationkey="262682" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1475394989181"></div>
-        </div>
     </div>
 
     <!--Video-->
 
 
+
     <!--end-->
 
     <!--LIMIT LANG NATIN SA RECENT 5 YUNG ANNOUCEMENTS/EVENTS-->
-    <div class="row dirtywhite">
+    <div class="row">
         <div class="col m6 s12">
             <ul id="task-card" class="collection with-header animated zoomInUp z-depth-2">
                 <li class="collection-header" style="background-color: #228B22">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">ANNOUNCEMENTS</h4>
-                    <p class="task-card-date" style="color: white">Last Updated: March 26, 2015</p>
+                    <p class="task-card-date" style="color: white">Last Updated: </p>
                 </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="viewAnnouncement.aspx" style="font-weight: 400; color: dimgray">Public Advisory|Road Closure</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Suspension of Classes</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Liquor Ban</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Liquor Ban</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Liquor Ban</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
+                <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
+                    <ItemTemplate>
+                        <li class="collection-item">
+                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Announce_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted") %><!--date ng event/announcement--></span></h6>
+                        </li>
+                    </ItemTemplate>
+                    <EmptyDataTemplate>
+                        <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO ANNOUNCEMENTS TO SHOW</h4>
+                    </EmptyDataTemplate>
+                </asp:ListView>
             </ul>
         </div>
+
+        <asp:SqlDataSource ID="ViewingAnnouncementDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
+            SelectCommand="SELECT TOP 5 AnnounceID, Announce_Title, Announce_DatePosted FROM [CityAnnouncements] ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
+
+
 
         <div class="col m6 s12">
             <ul id="task-card" class="collection with-header animated zoomInDown z-depth-2">
                 <li class="collection-header" style="background-color: #228B22">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">EVENTS</h4>
-                    <p class="task-card-date" style="color: white">Last Updated: March 26, 2015</p>
+                    <p class="task-card-date" style="color: white">Last Updated: </p>
                 </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="viewEvent.aspx" style="color: dimgray">Gawad Parangal 2016</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Town Fiesta</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Palarong Pambansa 2016</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Liquor Ban</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
-                <li class="collection-item">
-                    <h6>
-                        <a href="#" style="color: dimgray">Liquor Ban</a><span class="ultra-small secondary-content" style="color: #2E8B57">September 30, 2016<!--date ng event/announcement--></span>
-                    </h6>
-                </li>
+                <asp:ListView ID="EventsList" runat="server" DataSourceID="ViewingEventsDataSource" DataKeyNames="EventsID">
+                    <ItemTemplate>
+                        <li class="collection-item">
+                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Events_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Events_Date") %><!--date ng event/announcement--></span></h6>
+                        </li>
+                    </ItemTemplate>
+                    <EmptyDataTemplate>
+                        <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO EVENTS TO SHOW</h4>
+                    </EmptyDataTemplate>
+                </asp:ListView>
+
             </ul>
+
+            <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
+                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_Date FROM [CityEvents] ORDER BY Events_Date DESC"></asp:SqlDataSource>
+
         </div>
     </div>
     <hr />
+    <!---->
     <div class="dirtywhite">
         <div class="container">
             <div class="section scrollspy">
@@ -147,10 +122,13 @@
                         <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission] FROM [CityMission]"></asp:SqlDataSource>
                         <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
                             <ItemTemplate>
-                                <h1 class="center" style="font-weight: 600; font-size: 4em; color: #2F4F4F">MISSION</h1>
-                                <p style="text-align: center" class="center">
-                                    <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
-                                </p>
+                                <div class="card green z-depth-2">
+                                    <div class="card-content white-text">
+                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em;">MISSION</h1>
+                                        <p style="text-align: center" class="center">
+                                            <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
+                                        </p>
+                                    </div>
                                 </div>
                             </ItemTemplate>
                         </asp:FormView>
@@ -159,10 +137,13 @@
                         <asp:SqlDataSource ID="CityVisionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtVision] FROM [CityVision]"></asp:SqlDataSource>
                         <asp:FormView ID="CityVisionFormView" runat="server" DataSourceID="CityVisionDataSource">
                             <ItemTemplate>
-                                <h1 class="center" style="font-weight: 600; font-size: 4em; color: #2F4F4F">VISION</h1>
-                                <p style="text-align: center" class="center">
-                                    <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
-                                </p>
+                                <div class="card green z-depth-2">
+                                    <div class="card-content white-text">
+                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em">VISION</h1>
+                                        <p style="text-align: center" class="center">
+                                            <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
+                                        </p>
+                                    </div>
                                 </div>
                             </ItemTemplate>
                         </asp:FormView>
@@ -171,6 +152,9 @@
             </div>
             <div class="row center">
                 <div class="col m12 center">
+                    <div id="cont_3ebcba0f30b9f6dfd7e0903b3a61220f" style="width: 100%" class="center z-depth-2">
+                        <script type="text/javascript" async src="https://www.theweather.com/wid_loader/3ebcba0f30b9f6dfd7e0903b3a61220f"></script>
+                    </div>
                 </div>
             </div>
         </div>

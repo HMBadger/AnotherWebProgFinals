@@ -17,3 +17,4 @@ C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\bin\Mi
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.dll
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.pdb
+C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.csprojResolveAssemblyReference.cache

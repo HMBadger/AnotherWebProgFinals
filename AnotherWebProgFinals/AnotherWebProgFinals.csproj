@@ -74,6 +74,7 @@
     <Content Include="Administrator\localoff_maintenance.aspx" />
     <Content Include="Administrator\logo_banner.aspx" />
     <Content Include="Administrator\mission_vision.aspx" />
+    <Content Include="admin_login.aspx" />
     <Content Include="App_Data\webprog.mdf" />
     <Content Include="App_Data\webprog_log.ldf">
       <DependentUpon>webprog.mdf</DependentUpon>
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Administrator\mission_vision.aspx.designer.cs">
       <DependentUpon>mission_vision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.aspx.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_login.aspx.designer.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
