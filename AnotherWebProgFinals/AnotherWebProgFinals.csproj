@@ -85,6 +85,7 @@
     <Content Include="css\page-center.css" />
     <Content Include="css\style-horizontal.css" />
     <Content Include="font\dropify\dropify.svg" />
+    <Content Include="font\Satisfy\LICENSE.txt" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
     <Content Include="images\3.jpg" />
@@ -106,10 +107,16 @@
     <Content Include="images\gradi.jpg" />
     <Content Include="images\gradient2.jpg" />
     <Content Include="images\green.jpg" />
+    <Content Include="images\gtc_video.MP4" />
     <Content Include="images\han-hyo-joo-lee-jong-suk.jpg" />
     <Content Include="images\head.jpg" />
     <Content Include="images\header.jpg" />
     <Content Include="images\heading.jpg" />
+    <Content Include="images\history_img\aerial_shot.jpg" />
+    <Content Include="images\history_img\bridge.JPG" />
+    <Content Include="images\history_img\city hall.JPG" />
+    <Content Include="images\history_img\istat-u.JPG" />
+    <Content Include="images\history_img\river.JPG" />
     <Content Include="images\login-logo.png" />
     <Content Include="images\logo-trans.png" />
     <Content Include="images\LPU_Cavite_Front.jpg.png" />
@@ -122,6 +129,7 @@
     <Content Include="font\dropify\dropify.eot" />
     <Content Include="font\dropify\dropify.ttf" />
     <Content Include="font\dropify\dropify.woff" />
+    <Content Include="font\Satisfy\Satisfy-Regular.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -131,6 +139,7 @@
     <Content Include="User\directory.aspx" />
     <Content Include="User\history_para.aspx" />
     <Content Include="User\localofficials.aspx" />
+    <Content Include="User\Municipal_Profile.aspx" />
     <Content Include="User\viewAnnouncement.aspx" />
     <Content Include="User\viewEvent.aspx" />
     <Content Include="user_login.aspx" />
@@ -231,6 +240,13 @@
     </Compile>
     <Compile Include="User\localofficials.aspx.designer.cs">
       <DependentUpon>localofficials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Municipal_Profile.aspx.cs">
+      <DependentUpon>Municipal_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Municipal_Profile.aspx.designer.cs">
+      <DependentUpon>Municipal_Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\viewAnnouncement.aspx.cs">
       <DependentUpon>viewAnnouncement.aspx</DependentUpon>

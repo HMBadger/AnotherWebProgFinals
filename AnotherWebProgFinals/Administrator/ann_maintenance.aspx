@@ -4,31 +4,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <h3 class="center" style="font-weight: 600; color: #388E3C">ANNOUNCEMENTS MAINTENANCE</h3>
-        <div class="row" style="margin-top: 8%">
-            <div class="right col s12 m7" style="border: 2px solid transparent; margin-bottom: 7%">
+        <h3 class="center" style="font-weight: 600; color: #388E3C">CURRENT AND UPCOMING ANNOUNCEMENTS</h3>
+        <div class="row" style="margin-top: 8%; padding:3%; padding-top:0">
+            <div class="right col s12 m8" style="border: 2px solid transparent; margin-bottom: 7%">
                 <table class="table-responsive z-depth-2" style="width: 98%; margin-bottom: 50px; padding: 3%" border="1">
-                    <thead style="background-color: #74ea81">
+                    <thead style="background-color:#006400; color:white">
                         <tr>
-                            <th class="span_h2_green center" style="font-weight: 400">
-                                <h6>Title</h6>
+                            <th class="span_h2_green center" style="font-weight: 400; padding:2%; padding-top:4%; padding-bottom:4%" hidden>ID
                             </th>
-                            <th class="span_h2_green center" style="font-weight: 400">
-                                <h6>Date Posted</h6>
+                            <th class="span_h2_green center" style="font-weight: 400; padding:1%">Title
                             </th>
-                            <th class="span_h2_green center" style="font-weight: 400">
-                                <h6>Details</h6>
+                            <th class="span_h2_green center" style="font-weight: 400">Date Posted
                             </th>
-                            <th class="span_h2_green center" style="font-weight: 400">
-                                <h6>Actions</h6>
+                            <th class="span_h2_green center" style="font-weight: 400">Details
+                            </th>
+                            <th class="span_h2_green center" style="font-weight: 400">Actions
                             </th>
                         </tr>
                     </thead>
                     <asp:ListView ID="ListView1" runat="server" DataSourceID="CityAnnouncementsDataSource" DataKeyNames="AnnounceID">
                         <ItemTemplate>
                             <tbody>
-                                <tr>
-                                    <td class="center" style="width: 10%">
+                                <tr style="background-color:#F0FFF0">
+                                    <td class="center" style="width: 10%" hidden>
                                         <asp:TextBox ID="announceId"  runat="server"></asp:TextBox>
                                     </td>
                                     <td class="center" style="width: 10%">
@@ -41,8 +39,8 @@
                                         <%# Eval("Announce_Details").ToString().Replace(Environment.NewLine,"<br />") %>
                                     </td>
                                     <td class="center">
-                                        <asp:Button ID="EditButton" class="waves-effect green btn center-align" runat="server" CommandName="Edit" Text="Edit" />
-                                        <asp:Button ID="DeleteButton" class="waves-effect green btn center-align" runat="server" OnClick="DeleteButton_Click" Text="Delete" />
+                                        <asp:Button ID="EditButton" class="waves-effect blue lighten-1 btn-floating center-align mdi-editor-border-color" runat="server" CommandName="Edit" Text="Edit"/>
+                                        <asp:Button ID="DeleteButton" class="waves-effect red lighten-1 btn-floating center-align mdi-navigation-close" runat="server" OnClick="DeleteButton_Click" Text="Delete" />
                                     </td>
                                 </tr>
                             </tbody>
@@ -95,8 +93,8 @@
 
 
             <!--Form for Adding announcements-->
-                    <div class="left col s12 m5">
-                        <div class="col s12 m12 z-depth-2" style="background-color: #6cd068; padding: 3%; margin-top: 0.50%">
+                    <div class="left col s12 m4">
+                        <div class="col s12 m12 z-depth-2" style="background-color:#90EE90; padding: 3%; margin-top: 0.50%">
                             <center><b>Add New Announcement</b></center>
                         </div>
                         <div class="col s12 z-depth-2" style="padding: 5%">

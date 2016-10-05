@@ -26,11 +26,11 @@
         <header id="header" class="page-topbar">
             <!-- start header nav-->
             <div class="navbar-fixed">
-                <nav class="navbar-color">
+                <nav style="background:url(../images/headd.jpg)">
                     <div class="nav-wrapper">
                         <ul class="left">
                             <li>
-                                <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1 center">City of General Trias</a></h1>
+                                <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1 center"><strong>City of General Trias - Maintenance</strong></a></h1>
                             </li>
                         </ul>
                     </div>
@@ -49,12 +49,12 @@
                 <aside id="left-sidebar-nav">
                     <ul id="slide-out" class="side-nav leftside-navigation">
                         <li class="user-details cyan darken-2">
-                            <div class="row">
-                                <div class="col col s4 m4 l4">
+                            <div class="row" style="height:50%; padding-top:20%">
+                                <div class="col col s4 m4 l4" style="height:100px; padding-top:5%">
                                     <img src="../images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
                                 </div>
                                 <div class="col col s8 m8 l8">
-                                    <ul id="profile-dropdown" class="dropdown-content">
+                                    <ul id="profile-dropdown" class="dropdown-content" style="color:green">
                                         <li><a href="#"><i class="mdi-action-face-unlock"></i>Profile</a>
                                         </li>
                                         <li><a href="#"><i class="mdi-action-settings"></i>Settings</a>
@@ -77,16 +77,16 @@
                             <p class="ultra-small margin more-text">Essentials</p>
                         </li>
                         <li class="bold"><a href="dashboard.aspx" class="waves-effect waves-cyan"><i class="mdi-action-home"></i>Dashboard</a></li>
-                        <li class="bold"><a href="mission_vision.aspx" class="waves-effect waves-cyan"><i class="mdi-action-home"></i>Mission and Vision</a></li>
-                        <li class="bold"><a href="logo_banner.aspx" class="waves-effect waves-cyan"><i class="mdi-action-home"></i>Banner and Logo</a></li>
+                        <li class="bold"><a href="mission_vision.aspx" class="waves-effect waves-cyan"><i class="mdi-image-dehaze"></i>Mission and Vision</a></li>
+                        <li class="bold"><a href="logo_banner.aspx" class="waves-effect waves-cyan"><i class="mdi-image-loupe"></i>Banner and Logo</a></li>
                         <li class="li-hover">
                             <p class="ultra-small margin more-text">City Details</p>
                         </li>
-                        <li class="bold"><a href="historymaintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>History</a></li>
-                        <li class="bold"><a href="event_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Events</a></li>
+                        <li class="bold"><a href="historymaintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-action-book"></i>History</a></li>
+                        <li class="bold"><a href="event_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-format-list-bulleted"></i>Events</a></li>
                         <li class="bold"><a href="ann_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Announcements</a></li>
-                        <li class="bold"><a href="localoff_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>City Officials</a></li>
-                        <li class="bold"><a href="directory_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Directory</a></li>
+                        <li class="bold"><a href="localoff_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-av-recent-actors"></i>City Officials</a></li>
+                        <li class="bold"><a href="directory_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-maps-local-phone"></i>Directory</a></li>
                     </ul>
                     <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light green"><i class="mdi-navigation-menu"></i></a>
                 </aside>
@@ -97,14 +97,14 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-        <footer class="page-footer green">
+        <footer class="page-footer" style="background:url(../images/headd.jpg)">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">City of General Trias</h5>
+                    <div class="col l6 s12" style="padding-top:3%">
+                        <h5 class="white-text"><strong>City of General Trias</strong></h5>
                         <p class="grey-text text-lighten-4">situated at the northern part of the province and is located 14°23′ latitude and 121°53′ longitude. The distance from the Provincial Capitol in Trece Martires City is 18.27 km.</p>
                     </div>
-                    <div class="col l3 s12">
+                    <div class="col l3 s12" style="padding-top:1.5%">
                         <h5 class="white-text">Settings</h5>
                         <ul>
                             <li><a class="white-text" href="#!">Link 1</a></li>
@@ -113,7 +113,7 @@
                             <li><a class="white-text" href="#!">Link 4</a></li>
                         </ul>
                     </div>
-                    <div class="col l3 s12">
+                    <div class="col l3 s12" style="padding-top:1.5%">
                         <h5 class="white-text">Connect</h5>
                         <ul>
                             <li><a class="white-text" href="#!">Link 1</a></li>

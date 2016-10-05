@@ -18,6 +18,8 @@
     <link href="/css/style-horizontal.css" rel="stylesheet" media="screen,projection" />
     <link href="/css/perfect-scrollbar.css" rel="stylesheet" media="screen,projection" />
 
+    <link href="/font/Satisfy/Satisfy-Regular.ttf" rel="stylesheet" media="screen, projection" />
+ 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -27,22 +29,40 @@
         <header id="header" class="page-topbar">
             <!--header nav-->
             <div class="navbar-fixed">
-                <nav class="navbar-color">
+                <nav style="background:url(../images/headd.jpg)">
                     <div class="nav-wrapper">
-                        <ul class="left">
-                            <li>
-                                <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1">General Trias</a>
-                                    <span class="logo-text">General Trias</span></h1>
-                            </li>
+                       <strong><h1 class="logo-wrapper" style="font-family:Satisfy; padding-left:5%">
+                           <a href="#" class="left brand-logo darken-1" style="padding-top:1.3%; font-size:35px">Welcome to General Trias</a></h1><asp:Image ID="CityLogo" Style="width: 5%; height: 100%" runat="server" /> </strong>
+                            
+                        <ul class="right hide-on-med-and-down">
+                           <li><a href="index.aspx" class="white-text"><!--<i class="mdi-action-home"></i>-->Home</a></li>
+                            <li><a class="dropdown-button white-text" href="#!" data-activates="drpdwn_city"><!--<i class="mdi-action-home"></i>-->About Our City</a></li>
+                                <ul id="drpdwn_city" class="center dropdown-content z-depth-2" style="min-width:250px; display:inline-block; padding-top:1%; padding-bottom:1%; background-color: #FFFFFF">
+                                    <div class="col s12" style="width:100%">
+                                       
+                                            <li><a href="history_para.aspx" class="black-text"><i class="mdi-action-account-balance left"></i>City History</a></li>
+                                            <li><a href="Municipal_Profile.aspx" class="black-text"><i class="mdi-action-toc left"></i>Municipal Profile</a></li>
+                                            <li><a href="#!" class="black-text"><i class="mdi-maps-local-library left"></i>Legislation</a></li>
+                                        
+                                       
+                                            <li><a href="localofficials.aspx" class="black-text"><i class="mdi-social-group left"></i> Officials</a></li>
+                                            <li><a href="directory.aspx" class="black-text"><i class="mdi-notification-phone-in-talk left"></i>Department Directory</a></li>
+                                            <li><a href="#!" class="black-text"><i class="mdi-maps-map left"></i> Barangays</a></li>
+                                        
+                                    </div>
+                                </ul>
+                            <li><a href="#!" class="white-text"><!--<i class="mdi-action-home"></i>-->Tourism</a></li>
+                            <li><a href="#!" class="white-text"><!--<i class="mdi-action-home"></i>-->Contact Us</a></li>
+                            <li><a href="#!" class="white-text"><!--<i class="mdi-action-home"></i>-->Log in</a></li>
                         </ul>
                         <!--search box-->
-                        <div class="header-search-wrapper hide-on-med-and-down">
+                        <!--<div class="right header-search-wrapper hide-on-med-and-down" hidden>
                             <i class="mdi-action-search"></i>
                             <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search General Trias" />
-                        </div>
+                        </div>-->
 
                         <!--user controls-->
-                        <ul class="right hide-on-med-and-down">
+                        <ul class="right hide-on-med-and-down" hidden>
                             <li><a href="#" class="waves-effect waves-block waves-light notification-button" data-activates="#">
                                 <i class="mdi-action-account-circle"></i>
                             </a></li>
@@ -51,39 +71,24 @@
                 </nav>
 
                 <!--second navbar-->
-
-                <nav id="horizontal-nav" class="white hide-on-med-and-down">
-                    <div class="nav-wrapper">
-                        <ul id="ul-horizontal-nav" class="left hide-on-med-and-down">
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-home"></i><span>Home</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>City History</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Municipal Profile</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Legislation</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-maps-local-attraction"></i><span>Local Officials</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Department Directory</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Component Barangays</span></a></li>
-                            <li><a href="#" class="light-blue-text accent-2"><i class="mdi-action-info"></i><span>Tourism</span></a></li>
-                        </ul>
-                    </div>
-                </nav>
             </div>
         </header>
         <!--end navbarss-->
 
-        <section id="content">
+       
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </section>
-        <footer class="page-footer green">
+       
+        <footer class="page-footer" style="background:url(../images/headd.jpg)"><!--style="background-color:#32CD32" -->
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">City of General Trias</h5>
-                        <p class="grey-text text-lighten-4">situated at the northern part of the province and is located 14°23′ latitude and 121°53′ longitude. The distance from the Provincial Capitol in Trece Martires City is 18.27 km.</p>
+                    <div class="col l6 s12" style="padding-top:3%">
+                        <h5 class="white-text"><strong>City of General Trias</strong></h5>
+                        <p class="grey-text text-lighten-4">Situated at the northern part of the province and is located 14°23′ latitude and 121°53′ longitude. The distance from the Provincial Capitol in Trece Martires City is 18.27 km.</p>
 
 
                     </div>
-                    <div class="col l3 s12">
+                    <div class="col l3 s12" style="padding-top:1.5%">
                         <h5 class="white-text">Settings</h5>
                         <ul>
                             <li><a class="white-text" href="#!">Link 1</a></li>
@@ -92,7 +97,7 @@
                             <li><a class="white-text" href="#!">Link 4</a></li>
                         </ul>
                     </div>
-                    <div class="col l3 s12">
+                    <div class="col l3 s12" style="padding-top:1.5%">
                         <h5 class="white-text">Connect</h5>
                         <ul>
                             <li><a class="white-text" href="#!">Link 1</a></li>

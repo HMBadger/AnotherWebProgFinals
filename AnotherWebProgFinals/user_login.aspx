@@ -17,7 +17,7 @@
                 <ul class="collapsible z-depth-0" data-collapsible="accordion">
                     <!--start of LOGIN collapsible-->
                     <li>
-                        <div class="collapsible-header center white-text" style="background-color: #388e3c">Already have an account? Log in</div>
+                        <div class="collapsible-header center white-text" style="background-color: #388e3c">Already have an account? Log i<a href="user_login.aspx">user_login.aspx</a>n</div>
                         <div class="center collapsible-body row col s12 m12 l12" style="background-color: #388e3c">
                             <div class="col s12 m12 l12 center-on-small-only" style="margin-top: 3%">
                                 <div id="login-page" class="row" style="opacity: 0.90; background: transparent; padding-bottom: 1%">
