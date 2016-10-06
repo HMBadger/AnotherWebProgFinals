@@ -30,34 +30,34 @@
                     </thead>
                     <tbody class="center">
                         <tr style="background-color: #F0FFF0">
-                            <td>1990</td>
+                            <td class="center">1990</td>
                             <td class="right-align">52,888</td>
-                            <td>-</td>
+                            <td class="center">-</td>
                         </tr>
                         <tr style="background-color: #90EE90">
-                            <td>1995</td>
+                            <td class="center">1995</td>
                             <td class="right-align">66, 837</td>
-                            <td>+4.48%</td>
+                            <td class="center">+4.48%</td>
                         </tr>
                         <tr style="background-color: #F0FFF0">
-                            <td>2000</td>
+                            <td class="center">2000</td>
                             <td class="right-align">107,691</td>
-                            <td>+10.77%</td>
+                            <td class="center">+10.77%</td>
                         </tr>
                         <tr style="background-color: #90EE90">
-                            <td>2007</td>
+                            <td class="center">2007</td>
                             <td class="right-align">218,387</td>
-                            <td>+10.24%</td>
+                           <td class="center">+10.24%</td>
                         </tr>
                         <tr style="background-color: #F0FFF0">
-                            <td>2010</td>
+                            <td class="center">2010</td>
                             <td class="right-align">243,322	</td>
-                            <td>+4.01%</td>
+                           <td class="center">+4.01%</td>
                         </tr>
                         <tr style="background-color: #90EE90">
-                            <td>2015</td>
+                            <td class="center">2015</td>
                             <td class="right-align">314,303</td>
-                            <td>+4.99%</td>
+                            <td class="center">+4.99%</td>
                         </tr>
                     </tbody>
                 </table>

@@ -74,23 +74,5 @@ namespace AnotherWebProgFinals.User {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FormView CityMissionFormView;
-        
-        /// <summary>
-        /// CityVisionDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CityVisionDataSource;
-        
-        /// <summary>
-        /// CityVisionFormView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView CityVisionFormView;
     }
 }

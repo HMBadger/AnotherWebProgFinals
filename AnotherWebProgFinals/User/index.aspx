@@ -65,16 +65,21 @@
     <!--LIMIT LANG NATIN SA RECENT 5 YUNG ANNOUCEMENTS/EVENTS-->
     <div class="row">
         <div class="col m6 s12">
-            <ul id="task-card" class="collection with-header animated zoomInUp z-depth-2">
+            <ul id="task-card" class=" collapsible collection with-header animated zoomInUp z-depth-2" data-collapsible="accordion">
                 <li class="collection-header" style="background-color: #228B22">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">ANNOUNCEMENTS</h4>
                     <p class="task-card-date" style="color: white">Last Updated: </p>
+
                 </li>
                 <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
                     <ItemTemplate>
-                        <li class="collection-item">
-                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Announce_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted") %><!--date ng event/announcement--></span></h6>
-                        </li>
+                            
+                            <li>
+                                <div class="collapsible-header"><%#Eval("Announce_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted") %><!--date ng event/announcement--></span></div>
+                                <div class="collapsible-body" style="background-color: #e0d9d9">
+                                    <p><%#Eval("Announce_Details") %></p>
+                                </div>
+                            </li>
                     </ItemTemplate>
                     <EmptyDataTemplate>
                         <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO ANNOUNCEMENTS TO SHOW</h4>
@@ -84,7 +89,7 @@
         </div>
 
         <asp:SqlDataSource ID="ViewingAnnouncementDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-            SelectCommand="SELECT TOP 5 AnnounceID, Announce_Title, Announce_DatePosted FROM [CityAnnouncements] ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
+            SelectCommand="SELECT TOP 5 AnnounceID, Announce_Title, Announce_Details, Announce_DatePosted FROM [CityAnnouncements] WHERE Announce_IsActive = 1 ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
 
 
 
@@ -114,49 +119,45 @@
     </div>
     <hr />
     <!---->
-    <div class="dirtywhite">
+    <div class="dirtywhite" style="margin-top: 0">
         <div class="container">
-            <div class="section scrollspy">
-                <div class="row">
-                    <div class="col m6 s12 center animated fadeInLeft">
-                        <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission] FROM [CityMission]"></asp:SqlDataSource>
-                        <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
-                            <ItemTemplate>
-                                <div class="card green z-depth-2">
-                                    <div class="card-content white-text">
-                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em;">MISSION</h1>
-                                        <p style="text-align: center" class="center">
-                                            <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
-                                        </p>
-                                    </div>
+            <div class="row">
+                <div class="col m6 s12 center animated fadeInLeft">
+                    <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission], [txtVision] FROM [CityMission], [CityVision]"></asp:SqlDataSource>
+                    <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
+                        <ItemTemplate>
+                            <div class="card green z-depth-2" style="margin-top: 9%; padding-bottom: 6%">
+                                <div class="card-content white-text">
+                                    <h1 class="card-title center" style="font-weight: 600; font-size: 3em;">MISSION</h1>
+                                    <p style="text-align: center" class="center">
+                                        <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
+                                    </p>
+                                    <br />
+                                    <h1 class="card-title center" style="font-weight: 600; font-size: 3em">VISION</h1>
+                                    <p style="text-align: center" class="center">
+                                        <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
+                                    </p>
                                 </div>
-                            </ItemTemplate>
-                        </asp:FormView>
-                    </div>
-                    <div class="col m6 s12 center animated fadeInRight">
-                        <asp:SqlDataSource ID="CityVisionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtVision] FROM [CityVision]"></asp:SqlDataSource>
-                        <asp:FormView ID="CityVisionFormView" runat="server" DataSourceID="CityVisionDataSource">
-                            <ItemTemplate>
-                                <div class="card green z-depth-2">
-                                    <div class="card-content white-text">
-                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em">VISION</h1>
-                                        <p style="text-align: center" class="center">
-                                            <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
-                                        </p>
-                                    </div>
-                                </div>
-                            </ItemTemplate>
-                        </asp:FormView>
-                    </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:FormView>
+                </div>
+                <div class="col m6 s12 center animated fadeInRight">
+                    <h1>Featured Video</h1>
+                    <video src="../images/gtc_video.MP4" controls style="width: 100%"></video>
                 </div>
             </div>
+            <!--
             <div class="row center">
-                <div class="col m12 center">
+                <div class="col m8 center">
+                </div>
+                <div class="col m4 center">
                     <div id="cont_3ebcba0f30b9f6dfd7e0903b3a61220f" style="width: 100%" class="center z-depth-2">
                         <script type="text/javascript" async src="https://www.theweather.com/wid_loader/3ebcba0f30b9f6dfd7e0903b3a61220f"></script>
                     </div>
                 </div>
-            </div>
+
+            </div>-->
         </div>
     </div>
 

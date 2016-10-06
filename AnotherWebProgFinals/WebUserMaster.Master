@@ -49,6 +49,16 @@
                             <li><a href="#!" class="black-text"><i class="mdi-maps-map left"></i>Barangays</a></li>
 
                         </ul>
+                        <ul id="drpdwn_tourism" class="center dropdown-content z-depth-2" style="min-width: 250px; display: inline-block; padding-top: 1%; padding-bottom: 1%; background-color: #FFFFFF" data-constrainwidth="false">
+
+                            <li><a href="tourism_landmarks.aspx" class="black-text"><i class="mdi-action-account-balance left"></i>Landmarks</a></li>
+                            <li><a href="tourism_historical.aspx" class="black-text"><i class="mdi-maps-local-library left"></i>Historical Places</a></li>
+                            <li><a href="tourism_wheretostay.aspx" class="black-text"><i class="mdi-action-toc left"></i>Where To Stay</a></li>
+                            <li><a href="tourism_foods.aspx" class="black-text"><i class="mdi-action-toc left"></i>Foods To Eat</a></li>
+                            <li><a href="tourism_festivities.aspx" class="black-text"><i class="mdi-action-toc left"></i>Festivities</a></li>
+                            <li><a href="tourism_1town1product.aspx" class="black-text"><i class="mdi-action-toc left"></i>One Town, One Product</a></li>
+
+                        </ul>
 
                         <ul class="right hide-on-med-and-down">
                             <li><a href="index.aspx" class="white-text">
@@ -58,7 +68,7 @@
                                 <!--<i class="mdi-action-home"></i>-->
                                 About Our City</a></li>
 
-                            <li><a href="#!" class="white-text">
+                            <li><a href="#!" class="dropdown-button white-text" data-activates="drpdwn_tourism">
                                 <!--<i class="mdi-action-home"></i>-->
                                 Tourism</a></li>
                             <li><a href="#!" class="white-text">
@@ -141,6 +151,26 @@
         <script>
             $(".button-collapse").sideNav();
         </script>
+        <script>
+            $(document).ready(function () {
+                $('.collapsible').collapsible({
+                    accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                });
+            });
+
+        </script>
+
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: -34.397, lng: 150.644 },
+                    zoom: 8
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdLqXpIpExsBR77ro9T3hXWVz24vShuXs&callback=initMap"
+            async defer></script>
 
     </form>
 </body>
