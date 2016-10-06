@@ -114,49 +114,45 @@
     </div>
     <hr />
     <!---->
-    <div class="dirtywhite">
+    <div class="dirtywhite" style="margin-top: 0">
         <div class="container">
-            <div class="section scrollspy">
-                <div class="row">
-                    <div class="col m6 s12 center animated fadeInLeft">
-                        <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission] FROM [CityMission]"></asp:SqlDataSource>
-                        <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
-                            <ItemTemplate>
-                                <div class="card green z-depth-2">
-                                    <div class="card-content white-text">
-                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em;">MISSION</h1>
-                                        <p style="text-align: center" class="center">
-                                            <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
-                                        </p>
-                                    </div>
+            <div class="row">
+                <div class="col m6 s12 center animated fadeInLeft">
+                    <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission], [txtVision] FROM [CityMission], [CityVision]"></asp:SqlDataSource>
+                    <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
+                        <ItemTemplate>
+                            <div class="card green z-depth-2" style="margin-top: 9%; padding-bottom: 6%">
+                                <div class="card-content white-text">
+                                    <h1 class="card-title center" style="font-weight: 600; font-size: 3em;">MISSION</h1>
+                                    <p style="text-align: center" class="center">
+                                        <asp:Label ID="cityMissionLabel" runat="server" Text='<%# Bind("txtMission") %>' />
+                                    </p>
+                                    <br />
+                                    <h1 class="card-title center" style="font-weight: 600; font-size: 3em">VISION</h1>
+                                    <p style="text-align: center" class="center">
+                                        <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
+                                    </p>
                                 </div>
-                            </ItemTemplate>
-                        </asp:FormView>
-                    </div>
-                    <div class="col m6 s12 center animated fadeInRight">
-                        <asp:SqlDataSource ID="CityVisionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtVision] FROM [CityVision]"></asp:SqlDataSource>
-                        <asp:FormView ID="CityVisionFormView" runat="server" DataSourceID="CityVisionDataSource">
-                            <ItemTemplate>
-                                <div class="card green z-depth-2">
-                                    <div class="card-content white-text">
-                                        <h1 class="card-title center" style="font-weight: 600; font-size: 4em">VISION</h1>
-                                        <p style="text-align: center" class="center">
-                                            <asp:Label ID="cityVisionLabel" runat="server" Text='<%# Eval("txtVision") %>'></asp:Label>
-                                        </p>
-                                    </div>
-                                </div>
-                            </ItemTemplate>
-                        </asp:FormView>
-                    </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:FormView>
+                </div>
+                <div class="col m6 s12 center animated fadeInRight">
+                    <h1>Featured Video</h1>
+                    <video src="../images/gtc_video.MP4" controls style="width: 100%"></video>
                 </div>
             </div>
+            <!--
             <div class="row center">
-                <div class="col m12 center">
+                <div class="col m8 center">
+                </div>
+                <div class="col m4 center">
                     <div id="cont_3ebcba0f30b9f6dfd7e0903b3a61220f" style="width: 100%" class="center z-depth-2">
                         <script type="text/javascript" async src="https://www.theweather.com/wid_loader/3ebcba0f30b9f6dfd7e0903b3a61220f"></script>
                     </div>
                 </div>
-            </div>
+
+            </div>-->
         </div>
     </div>
 

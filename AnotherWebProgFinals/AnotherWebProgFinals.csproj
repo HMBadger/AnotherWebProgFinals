@@ -141,6 +141,7 @@
     <Content Include="User\history_para.aspx" />
     <Content Include="User\localofficials.aspx" />
     <Content Include="User\Municipal_Profile.aspx" />
+    <Content Include="User\tourism.aspx" />
     <Content Include="User\viewAnnouncement.aspx" />
     <Content Include="User\viewEvent.aspx" />
     <Content Include="user_login.aspx" />
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="User\Municipal_Profile.aspx.designer.cs">
       <DependentUpon>Municipal_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\tourism.aspx.cs">
+      <DependentUpon>tourism.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\tourism.aspx.designer.cs">
+      <DependentUpon>tourism.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\viewAnnouncement.aspx.cs">
       <DependentUpon>viewAnnouncement.aspx</DependentUpon>
