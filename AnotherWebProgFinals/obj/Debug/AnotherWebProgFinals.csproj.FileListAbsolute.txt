@@ -33,8 +33,12 @@ C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\VB
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.dll.config
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.dll
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.pdb
+C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\AjaxControlToolkit.dll
+C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.dll
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.pdb
+C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.xml
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.csprojResolveAssemblyReference.cache
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.dll
 C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.pdb
-C:\Users\arian\Documents\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.csprojResolveAssemblyReference.cache

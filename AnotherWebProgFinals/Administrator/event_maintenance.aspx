@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdminMaster.Master" AutoEventWireup="true" CodeBehind="event_maintenance.aspx.cs" Inherits="AnotherWebProgFinals.Administrator.event_maintenance" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:SqlDataSource ID="CityEventsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" OldValuesParameterFormatString="old_{0}"
         SelectCommand="SELECT * FROM [CityEvents] WHERE [Events_IsActive] = 1" UpdateCommand="UPDATE [CityEvents] SET [Events_Title] = @Events_Title, [Events_StartDate] = @Events_StartDate, [Events_EndDate] = @Events_EndDate, [Events_Location] = @Events_Location, [Events_Details] = @Events_Details
-         WHERE [EventsID] = @old_EventsID" DeleteCommand="UPDATE [CityEvents] SET [Events_IsActive] = 0 WHERE [EventsID] = @old_EventsID">
+         WHERE [EventsID] = @old_EventsID"
+        DeleteCommand="UPDATE [CityEvents] SET [Events_IsActive] = 0 WHERE [EventsID] = @old_EventsID">
         <UpdateParameters>
             <asp:Parameter Name="EventsID" Type="Int32" />
             <asp:Parameter Name="Events_Title" Type="String" />
@@ -20,6 +22,8 @@
             <asp:Parameter Name="old_EventsID" Type="Int32" />
         </DeleteParameters>
     </asp:SqlDataSource>
+
+    <asp:ScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ScriptManager>
 
     <div class="container">
         <h1 class="center" style="font-weight: 600; color: #388E3C; margin-top: 5%">CURRENT AND UPCOMING EVENTS</h1>
@@ -86,6 +90,7 @@
                                         </td>
                                         <td class="center">
                                             <asp:TextBox ID="txtDetails" runat="server" Text='<%# Bind("Events_Details") %>'></asp:TextBox>
+                                            <asp:HtmlEditorExtender ID="HtmlEditorDetails" runat="server" TargetControlID="txtDetails" EnableSanitization="false"></asp:HtmlEditorExtender>
                                         </td>
                                         <td>
                                             <asp:Button ID="UpdateButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
@@ -133,6 +138,7 @@
                         </div>
                         <div class="col s8">
                             <asp:TextBox ID="Events_Details" TextMode="MultiLine" CssClass="materialize-textarea" runat="server"></asp:TextBox>
+                            <asp:HtmlEditorExtender ID="HtmlEditorAddDetails" runat="server" TargetControlID="Events_Details" EnableSanitization="false"></asp:HtmlEditorExtender>
                         </div>
 
                         <div class="col s12">

@@ -89,7 +89,7 @@
         </div>
 
         <asp:SqlDataSource ID="ViewingAnnouncementDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-            SelectCommand="SELECT TOP 5 AnnounceID, Announce_Title, Announce_Details, Announce_DatePosted FROM [CityAnnouncements] WHERE Announce_IsActive = 1 ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
+            SelectCommand="SELECT TOP 5 AnnounceID, Announce_Title, Announce_Details, Announce_DatePosted FROM [CityAnnouncements] WHERE Announce_IsActive = 1 AND DATEDIFF(dd, [Announce_DatePosted], GETDATE()) < 7 ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
 
 
 
@@ -113,7 +113,7 @@
             </ul>
 
             <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDateTime, Events_EndDateTime FROM [CityEvents] ORDER BY Events_StartDateTime DESC"></asp:SqlDataSource>
+                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDate, Events_EndDate FROM [CityEvents] ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
 
         </div>
     </div>

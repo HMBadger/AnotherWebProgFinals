@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdminMaster.Master" AutoEventWireup="true" CodeBehind="ann_maintenance.aspx.cs" Inherits="AnotherWebProgFinals.Administrator.ann_maintenance" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -16,6 +17,8 @@
             <asp:Parameter Name="old_AnnounceID" Type="Int32" />
         </DeleteParameters>
     </asp:SqlDataSource>
+
+    <asp:ScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ScriptManager>
 
     <div class="container">
         <h3 class="center" style="font-weight: 600; color: #388E3C">CURRENT AND UPCOMING ANNOUNCEMENTS</h3>
@@ -71,6 +74,7 @@
                                     </td>
                                     <td class="center">
                                         <asp:TextBox ID="txtDetails" runat="server" Text='<%# Bind("Announce_Details") %>'></asp:TextBox>
+                                        <asp:HtmlEditorExtender ID="HtmlEditorDetails" runat="server" TargetControlID="txtDetails" EnableSanitization="false"></asp:HtmlEditorExtender>
                                     </td>
                                     <td class="center">
                                         <asp:Button ID="UpdateButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
@@ -102,6 +106,7 @@
                     </div>
                     <div class="col s12" style="padding-left: 5%; padding-right: 5%">
                         <asp:TextBox ID="Announce_Details" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" /><br />
+                        <asp:HtmlEditorExtender ID="HtmlEditorAddDetails" runat="server" TargetControlID="Announce_Details" EnableSanitization="false"></asp:HtmlEditorExtender>
                     </div>
 
                     <div class="col s12">

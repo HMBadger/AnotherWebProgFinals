@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdminMaster.Master" AutoEventWireup="true" CodeBehind="historymaintenance.aspx.cs" Inherits="AnotherWebProgFinals.Administrator.historymaintenance" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -20,6 +21,8 @@
             <asp:Parameter Name="original_txtHistory" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
+
+    <asp:ScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ScriptManager>
 
     <div id="HistoryItemPlaceholderContainer" runat="server" class="center">
         <div class="container">
@@ -43,8 +46,9 @@
                         
                             <div class="z-depth-2" style="padding: 5%; padding-top:2%; border:3px gray solid">
                             <asp:Label ID="lblEditCityHistory" runat="server" CssClass="control-label col-md-12 col-sm-12" AssociatedControlID="txtEditCityHistory"> </asp:Label><br />
-                            <div class="col-md-12 col-sm-12" style="text-align: center;">
+                            <div class="col-md-12 col-sm-12" style="text-align: center; min-height:20%; max-height:50%">
                                 <asp:TextBox ID="txtEditCityHistory" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" Text='<%# Bind("txtHistory") %>' /><br />
+                                <asp:HtmlEditorExtender ID="HtmlEditorHistory" runat="server" TargetControlID="txtEditCityHistory" EnableSanitization="false"></asp:HtmlEditorExtender>
                             </div>
                              </div>
                       
