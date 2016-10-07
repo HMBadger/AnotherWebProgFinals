@@ -27,6 +27,7 @@ namespace AnotherWebProgFinals.User
                         string cityLogo = "../" + (String)reader["strLogoPath"];
                         CityBanner.ImageUrl = cityBanner;
                         //CityLogo.ImageUrl = cityLogo;
+                        
                     }
                 }
                 catch(Exception ex)

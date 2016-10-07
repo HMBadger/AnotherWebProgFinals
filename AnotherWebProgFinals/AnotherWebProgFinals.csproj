@@ -104,21 +104,28 @@
     <Content Include="images\7.jpg" />
     <Content Include="images\8.jpg" />
     <Content Include="images\admin-icon.png" />
+    <Content Include="images\aerial.mp4" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\background1.jpg" />
     <Content Include="images\background2.jpg" />
     <Content Include="images\background3.jpg" />
     <Content Include="images\banner.jpg" />
+    <Content Include="images\border.jpg" />
+    <Content Include="images\buffalo_web.jpg" />
     <Content Include="images\church.JPG" />
     <Content Include="images\city_logo.png" />
     <Content Include="images\DSC_6930.jpg" />
+    <Content Include="images\eagleridge.jpg" />
+    <Content Include="images\gbr.jpg" />
     <Content Include="images\gra.jpg" />
     <Content Include="images\gradi.jpg" />
     <Content Include="images\gradient2.jpg" />
     <Content Include="images\green.jpg" />
     <Content Include="images\gtc_video.MP4" />
+    <Content Include="images\guadalupe.png" />
     <Content Include="images\han-hyo-joo-lee-jong-suk.jpg" />
     <Content Include="images\head.jpg" />
+    <Content Include="images\headd.jpg" />
     <Content Include="images\header.jpg" />
     <Content Include="images\heading.jpg" />
     <Content Include="images\history_img\aerial_shot.jpg" />
@@ -126,11 +133,22 @@
     <Content Include="images\history_img\city hall.JPG" />
     <Content Include="images\history_img\istat-u.JPG" />
     <Content Include="images\history_img\river.JPG" />
+    <Content Include="images\Kasilyo.jpg" />
+    <Content Include="images\kesongputi.jpg" />
+    <Content Include="images\latraviesa.jpg" />
     <Content Include="images\login-logo.png" />
     <Content Include="images\logo-trans.png" />
+    <Content Include="images\lpu.png" />
     <Content Include="images\LPU_Cavite_Front.jpg.png" />
+    <Content Include="images\lyceum.jpg" />
     <Content Include="images\office.jpg" />
+    <Content Include="images\parishchurch.JPG" />
+    <Content Include="images\SS.png" />
     <Content Include="images\user-bg.jpg" />
+    <Content Include="images\valenciana.JPG" />
+    <Content Include="images\Valencianaa.jpg" />
+    <Content Include="images\valencianaaa.jpg" />
+    <Content Include="images\valfes.JPG" />
     <Content Include="images\works-10.jpg" />
     <Content Include="js\dropify.js" />
     <Content Include="js\plugins.min.js" />
@@ -365,6 +383,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="css\admin\" />
     <Folder Include="font\material-design-icons\" />
     <Folder Include="font\roboto\" />
     <Folder Include="images\officials\" />

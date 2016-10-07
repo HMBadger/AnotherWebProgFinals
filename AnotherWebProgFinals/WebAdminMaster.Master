@@ -15,7 +15,6 @@
     <!--CSS-->
     <link href="/css/materialize.min.css" rel="stylesheet" media="screen,projection" />
     <link href="/css/style.min.css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style-fullscreen.css" rel="stylesheet" />
     <link href="/css/perfect-scrollbar.css" rel="stylesheet" media="screen,projection" />
     <link href="/css/dropify.css" rel="stylesheet" media="screen, projection" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -23,6 +22,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
         <header id="header" class="page-topbar">
             <!-- start header nav-->
             <div class="navbar-fixed">
@@ -40,12 +40,8 @@
         </header>
         <!-- END HEADER -->
 
-        <!-- START MAIN -->
         <div id="main">
-            <!-- START WRAPPER -->
             <div class="wrapper">
-
-                <!-- START LEFT SIDEBAR NAV-->
                 <aside id="left-sidebar-nav">
                     <ul id="slide-out" class="side-nav fixed leftside-navigation">
                         <li class="user-details cyan darken-2">
@@ -72,6 +68,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!--user details-->
                         <!--start sidenav content-->
                         <li class="li-hover">
                             <p class="ultra-small margin more-text">Essentials</p>
@@ -88,18 +85,18 @@
                         <li class="bold"><a href="localoff_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-av-recent-actors"></i>City Officials</a></li>
                         <li class="bold"><a href="directory_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-maps-local-phone"></i>Directory</a></li>
                     </ul>
-                    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light green"><i class="mdi-navigation-menu"></i></a>
-
                 </aside>
-                <!-- END LEFT SIDEBAR NAV-->
+                <section id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
             </div>
-
-            <section id="content">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </section>
         </div>
+        <!--end main-->
 
+
+
+        
 
         <footer class="page-footer" style="background: url(../images/headd.jpg)">
             <div class="container">

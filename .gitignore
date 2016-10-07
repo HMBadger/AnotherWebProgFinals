@@ -57,3 +57,11 @@ AnotherWebProgFinals/obj/Debug/AnotherWebProgFinals.dll
 AnotherWebProgFinals/obj/Debug/AnotherWebProgFinals.dll
 .vs/AnotherWebProgFinals/v14/.suo
 AnotherWebProgFinals/bin/AnotherWebProgFinals.pdb
+*.config
+.vs/AnotherWebProgFinals/v14/.suo
+*.dll
+*.pdb
+*.cache
+AnotherWebProgFinals/obj/Debug/AnotherWebProgFinals.dll
+*.pdb
+AnotherWebProgFinals/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

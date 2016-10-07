@@ -68,23 +68,27 @@
             <ul id="task-card" class=" collapsible collection with-header animated zoomInUp z-depth-2" data-collapsible="accordion">
                 <li class="collection-header" style="background-color: #228B22">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">ANNOUNCEMENTS</h4>
-                    <p class="task-card-date" style="color: white">Last Updated: </p>
-
+                    <p class="task-card-date" style="color: white">
+                        Last Updated:</p>
+                    
                 </li>
                 <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
                     <ItemTemplate>
-                            
-                            <li>
-                                <div class="collapsible-header"><%#Eval("Announce_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></div>
-                                <div class="collapsible-body" style="background-color: #e0d9d9">
-                                    <p><%#Eval("Announce_Details") %></p>
-                                </div>
-                            </li>
+                        <li>
+                            <div class="collapsible-header"><%#Eval("Announce_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></div>
+                            <div class="collapsible-body" style="background-color: #e0d9d9">
+                                <p><%#Eval("Announce_Details") %></p>
+                            </div>
+                        </li>
+
                     </ItemTemplate>
                     <EmptyDataTemplate>
                         <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO ANNOUNCEMENTS TO SHOW</h4>
                     </EmptyDataTemplate>
                 </asp:ListView>
+                <li class="collection-item">
+                    <h6><a href="#">See more Announcements</a></h6>
+                </li>
             </ul>
         </div>
 
@@ -94,26 +98,32 @@
 
 
         <div class="col m6 s12">
-            <ul id="task-card" class="collection with-header animated zoomInDown z-depth-2">
+            <ul id="task-card" class="collapsible collection with-header animated zoomInDown z-depth-2">
                 <li class="collection-header" style="background-color: #228B22">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">EVENTS</h4>
                     <p class="task-card-date" style="color: white">Last Updated: </p>
                 </li>
                 <asp:ListView ID="EventsList" runat="server" DataSourceID="ViewingEventsDataSource" DataKeyNames="EventsID">
                     <ItemTemplate>
-                        <li class="collection-item">
-                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Events_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57">Start Date: <%#Eval("Events_StartDate", "{0:M-dd-yyyy}") %>, End Date:  <%#Eval("Events_EndDate", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></h6>
+                        <li>
+                            <div class="collapsible-header"><%#Eval("Events_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57">Start Date: <%#Eval("Events_StartDate", "{0:M-dd-yyyy}") %>, End Date:  <%#Eval("Events_EndDate", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></div>
+                            <div class="collapsible-body" style="background-color: #e0d9d9">
+                                <p><%#Eval("Events_Details") %></p>
+                            </div>
                         </li>
+                        
                     </ItemTemplate>
                     <EmptyDataTemplate>
                         <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO EVENTS TO SHOW</h4>
                     </EmptyDataTemplate>
                 </asp:ListView>
-
+                <li class="collection-item">
+                    <h6><a href="#">See more Events</a></h6>
+                </li>
             </ul>
 
             <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDate, Events_EndDate FROM [CityEvents] ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
+                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDate, Events_EndDate, Events_Details FROM [CityEvents] ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
 
         </div>
     </div>
@@ -144,7 +154,10 @@
                 </div>
                 <div class="col m6 s12 center animated fadeInRight">
                     <h1>Featured Video</h1>
-                    <video src="../images/gtc_video.MP4" controls style="width: 100%"></video>
+                    <video controls style="width: 100%">
+                        <source src="../images/aerial.mp4" type="video/mp4" />
+                    </video>
+                    
                 </div>
             </div>
             <!--
