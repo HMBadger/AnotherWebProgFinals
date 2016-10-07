@@ -143,6 +143,7 @@
         <script src="/js/materialize.min.js"></script>
         <script src="/js/perfect-scrollbar.min.js"></script>
         <script src="/js/plugins.min.js"></script>
+        <script src="/js/google-map-script.js"></script>
         <script>
             $(document).ready(function () {
                 $('.slider').slider();
@@ -159,7 +160,6 @@
             });
 
         </script>
-
     </form>
 </body>
 </html>
