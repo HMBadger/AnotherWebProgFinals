@@ -13,15 +13,6 @@ namespace AnotherWebProgFinals.Administrator {
     public partial class ann_maintenance {
         
         /// <summary>
-        /// ListView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
-        
-        /// <summary>
         /// CityAnnouncementsDataSource control.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace AnotherWebProgFinals.Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource CityAnnouncementsDataSource;
+        
+        /// <summary>
+        /// ListView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
         /// Announce_Title control.

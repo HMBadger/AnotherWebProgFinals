@@ -75,7 +75,7 @@
                     <ItemTemplate>
                             
                             <li>
-                                <div class="collapsible-header"><%#Eval("Announce_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted") %><!--date ng event/announcement--></span></div>
+                                <div class="collapsible-header"><%#Eval("Announce_Title") %><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Announce_DatePosted", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></div>
                                 <div class="collapsible-body" style="background-color: #e0d9d9">
                                     <p><%#Eval("Announce_Details") %></p>
                                 </div>

@@ -62,24 +62,6 @@ namespace AnotherWebProgFinals.Administrator
             
             Response.Redirect("~/Administrator/ann_maintenance.aspx");
         }
-        /**
-        protected void DeleteButton_Click(object sender, EventArgs e)
-        {
-            //int old = "";
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webprog"].ConnectionString);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-
-
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.DeleteCommand = new SqlCommand(@"DELETE FROM [CityAnnouncements] WHERE [AnnounceID] = @old_AnnounceID", con);
-            
-            con.Open();
-            da.DeleteCommand.ExecuteNonQuery();
-            con.Close();
-
-            Response.Redirect("~/Administrator/ann_maintenance.aspx");
-        }**/
+        
     }
 }

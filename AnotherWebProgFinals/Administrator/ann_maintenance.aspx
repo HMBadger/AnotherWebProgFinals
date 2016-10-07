@@ -3,6 +3,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:SqlDataSource ID="CityAnnouncementsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>"
+        InsertCommand="INSERT INTO [CityAnnouncements] ([Announce_Title], [Announce_DatePosted], [Announce_Details], [Announce_IsActive]) VALUES (@Announce_Title, @Announce_DatePosted, @Announce_Details, @Announce_IsActive)" OldValuesParameterFormatString="old_{0}"
+        SelectCommand="SELECT * FROM [CityAnnouncements] WHERE [Announce_IsActive] = 1" UpdateCommand="UPDATE [CityAnnouncements] SET [Announce_Title] = @Announce_Title, [Announce_DatePosted] = @Announce_DatePosted, [Announce_Details] = @Announce_Details WHERE [AnnounceID] = @old_AnnounceID"
+        DeleteCommand="UPDATE [CityAnnouncements] SET [Announce_IsActive] = 0 WHERE [AnnounceID] = @old_AnnounceID">
+        <UpdateParameters>
+            <asp:Parameter Name="Announce_Title" Type="String" />
+            <asp:Parameter Name="Announce_DatePosted" Type="String" />
+            <asp:Parameter Name="Announce_Details" Type="String" />
+            <asp:Parameter Name="old_AnnounceID" Type="Int32" />
+            <asp:Parameter Name="old_Announce_Title" Type="String" />
+            <asp:Parameter Name="old_Announce_DatePosted" Type="String" />
+            <asp:Parameter Name="old_Announce_Details" Type="String" />
+        </UpdateParameters>
+        <DeleteParameters>
+            <asp:Parameter Name="old_AnnounceID" Type="Int32" />
+        </DeleteParameters>
+    </asp:SqlDataSource>
+
     <div class="container">
         <h3 class="center" style="font-weight: 600; color: #388E3C">CURRENT AND UPCOMING ANNOUNCEMENTS</h3>
         <div class="row" style="margin-top: 8%; padding: 3%; padding-top: 0">
@@ -33,15 +51,15 @@
                                         <%# Eval("Announce_Title") %>
                                     </td>
                                     <td class="center">
-                                        
-                                        <%# Eval("Announce_DatePosted") %>
+
+                                        <%# Eval("Announce_DatePosted", "{0:M-dd-yyyy}") %>
                                     </td>
                                     <td class="center">
                                         <%# Eval("Announce_Details").ToString().Replace(Environment.NewLine,"<br />") %>
                                     </td>
                                     <td class="center">
-                                        <asp:Button ID="EditButton" class="waves-effect blue lighten-1 btn-floating center-align mdi-editor-border-color" runat="server" CommandName="Edit" Text="Edit" />
-                                        <asp:Button ID="DeleteButton" class="waves-effect red lighten-1 btn-floating center-align mdi-navigation-close" runat="server" CommandName="Delete" Text="Delete" />
+                                        <asp:Button ID="EditButton" class="waves-effect blue lighten-1 btn-floating center-align mdi-editor-border-color" runat="server" CommandName="Edit" />
+                                        <asp:Button ID="DeleteButton" class="waves-effect red lighten-1 btn-floating center-align mdi-navigation-close" runat="server" CommandName="Delete" />
                                     </td>
                                 </tr>
                             </tbody>
@@ -67,25 +85,6 @@
                         </EditItemTemplate>
                     </asp:ListView>
                 </table>
-                
-                <asp:SqlDataSource ID="CityAnnouncementsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-                    InsertCommand="INSERT INTO [CityAnnouncements] ([Announce_Title], [Announce_DatePosted], [Announce_Details], [Announce_IsActive]) VALUES (@Announce_Title, @Announce_DatePosted, @Announce_Details, @Announce_IsActive)" OldValuesParameterFormatString="old_{0}"
-                    SelectCommand="SELECT * FROM [CityAnnouncements]" UpdateCommand="UPDATE [CityAnnouncements] SET [Announce_Title] = @Announce_Title, [Announce_DatePosted] = @Announce_DatePosted, [Announce_Details] = @Announce_Details WHERE [AnnounceID] = @old_AnnounceID"
-                    DeleteCommand="UPDATE [CityAnnouncements] SET [Announce_IsActive] = 0 WHERE [AnnounceID] = @old_AnnounceID">
-                    <UpdateParameters>
-                        <asp:Parameter Name="Announce_Title" Type="String" />
-                        <asp:Parameter Name="Announce_DatePosted" Type="String" />
-                        <asp:Parameter Name="Announce_Details" Type="String" />
-                        <asp:Parameter Name="old_AnnounceID" Type="Int32" />
-                        <asp:Parameter Name="old_Announce_Title" Type="String" />
-                        <asp:Parameter Name="old_Announce_DatePosted" Type="String" />
-                        <asp:Parameter Name="old_Announce_Details" Type="String" />
-                    </UpdateParameters>
-                    <DeleteParameters>
-                        <asp:Parameter Name="AnnounceID" Type="Int32" />
-                        <asp:Parameter Name="old_AnnounceID" Type="Int32" />
-                    </DeleteParameters>
-                </asp:SqlDataSource>
             </div>
             <!--end ng table to bes-->
 
