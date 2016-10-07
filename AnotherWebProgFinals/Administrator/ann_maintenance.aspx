@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:SqlDataSource ID="CityAnnouncementsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>"
-        InsertCommand="INSERT INTO [CityAnnouncements] ([Announce_Title], [Announce_DatePosted], [Announce_Details], [Announce_IsActive]) VALUES (@Announce_Title, @Announce_DatePosted, @Announce_Details, @Announce_IsActive)" OldValuesParameterFormatString="old_{0}"
+    <asp:SqlDataSource ID="CityAnnouncementsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" OldValuesParameterFormatString="old_{0}"
         SelectCommand="SELECT * FROM [CityAnnouncements] WHERE [Announce_IsActive] = 1" UpdateCommand="UPDATE [CityAnnouncements] SET [Announce_Title] = @Announce_Title, [Announce_DatePosted] = @Announce_DatePosted, [Announce_Details] = @Announce_Details WHERE [AnnounceID] = @old_AnnounceID"
         DeleteCommand="UPDATE [CityAnnouncements] SET [Announce_IsActive] = 0 WHERE [AnnounceID] = @old_AnnounceID">
         <UpdateParameters>
@@ -12,9 +11,6 @@
             <asp:Parameter Name="Announce_DatePosted" Type="String" />
             <asp:Parameter Name="Announce_Details" Type="String" />
             <asp:Parameter Name="old_AnnounceID" Type="Int32" />
-            <asp:Parameter Name="old_Announce_Title" Type="String" />
-            <asp:Parameter Name="old_Announce_DatePosted" Type="String" />
-            <asp:Parameter Name="old_Announce_Details" Type="String" />
         </UpdateParameters>
         <DeleteParameters>
             <asp:Parameter Name="old_AnnounceID" Type="Int32" />
@@ -107,8 +103,6 @@
                     <div class="col s12" style="padding-left: 5%; padding-right: 5%">
                         <asp:TextBox ID="Announce_Details" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" /><br />
                     </div>
-                    <!--<input type="date" value="DateTime.Now()" name="Announce_DatePosted" hidden />-->
-                    <!-- <input type="int" value="1" name="Announce_IsActive" hidden /> -->
 
                     <div class="col s12">
                         <div class="right col s3">

@@ -102,7 +102,7 @@
                 <asp:ListView ID="EventsList" runat="server" DataSourceID="ViewingEventsDataSource" DataKeyNames="EventsID">
                     <ItemTemplate>
                         <li class="collection-item">
-                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Events_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57"><%#Eval("Events_Date") %><!--date ng event/announcement--></span></h6>
+                            <h6><a href="#" style="font-weight: 400; color: dimgray"><%#Eval("Events_Title") %></a><span class="ultra-small secondary-content" style="color: #2E8B57">Start Date: <%#Eval("Events_StartDate", "{0:M-dd-yyyy}") %>, End Date:  <%#Eval("Events_EndDate", "{0:M-dd-yyyy}") %><!--date ng event/announcement--></span></h6>
                         </li>
                     </ItemTemplate>
                     <EmptyDataTemplate>
@@ -113,7 +113,7 @@
             </ul>
 
             <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_Date FROM [CityEvents] ORDER BY Events_Date DESC"></asp:SqlDataSource>
+                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDateTime, Events_EndDateTime FROM [CityEvents] ORDER BY Events_StartDateTime DESC"></asp:SqlDataSource>
 
         </div>
     </div>
