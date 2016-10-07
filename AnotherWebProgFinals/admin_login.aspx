@@ -22,14 +22,14 @@
                 <div class="row margin">
                     <div class="input-field col s12">
                         <i class="mdi-social-person-outline prefix"></i>
-                        <input id="username" type="text">
+                       <input id="UserName" type="text" runat="server">
                         <label for="username" class="center-align">Username</label>
                     </div>
                 </div>
                 <div class="row margin">
                     <div class="input-field col s12">
                         <i class="mdi-action-lock-outline prefix"></i>
-                        <input id="password" type="password">
+                        <input id="UserPassword" type="password" runat="server">
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -41,7 +41,8 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <a href="/Administrator/dashboard.aspx" class="btn waves-effect waves-light col s12 green">Login</a>
+                        <asp:Button ID ="loginButton" CssClass="btn waves-effect waves-light col s12 green" runat="server" Text="Login" onClick ="btnLogin_Click"/>
+                        
                     </div>
                 </div>
                 <script src="js/jquery-1.11.2.min.js"></script>
