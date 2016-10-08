@@ -66,11 +66,12 @@
     <div class="row">
         <div class="col m6 s12">
             <ul id="task-card" class=" collapsible collection with-header animated zoomInUp z-depth-2" data-collapsible="accordion">
-                <li class="collection-header" style="background-color: #228B22">
+                <li class="collection-header" style="background-color: #4CAF50">
                     <h4 class="task-card-title" style="color: white; font-weight: 600">ANNOUNCEMENTS</h4>
                     <p class="task-card-date" style="color: white">
-                        Last Updated:</p>
-                    
+                        All the latest announcements of the City Government
+                    </p>
+
                 </li>
                 <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
                     <ItemTemplate>
@@ -99,9 +100,9 @@
 
         <div class="col m6 s12">
             <ul id="task-card" class="collapsible collection with-header animated zoomInDown z-depth-2">
-                <li class="collection-header" style="background-color: #228B22">
+                <li class="collection-header" style="background-color: #4CAF50" >
                     <h4 class="task-card-title" style="color: white; font-weight: 600">EVENTS</h4>
-                    <p class="task-card-date" style="color: white">Last Updated: </p>
+                    <p class="task-card-date" style="color: white">All planned events of the City Government for its citizens</p>
                 </li>
                 <asp:ListView ID="EventsList" runat="server" DataSourceID="ViewingEventsDataSource" DataKeyNames="EventsID">
                     <ItemTemplate>
@@ -111,7 +112,7 @@
                                 <p><%#Eval("Events_Details") %></p>
                             </div>
                         </li>
-                        
+
                     </ItemTemplate>
                     <EmptyDataTemplate>
                         <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO EVENTS TO SHOW</h4>
@@ -157,28 +158,27 @@
                     <video controls style="width: 100%">
                         <source src="../images/aerial.mp4" type="video/mp4" />
                     </video>
-                    
+
                 </div>
             </div>
-            <!--
+            
+            <!--Weather-->
             <div class="row center">
-                <div class="col m8 center">
-                </div>
-                <div class="col m4 center">
+                <div class="col m12 center">
                     <div id="cont_3ebcba0f30b9f6dfd7e0903b3a61220f" style="width: 100%" class="center z-depth-2">
                         <script type="text/javascript" async src="https://www.theweather.com/wid_loader/3ebcba0f30b9f6dfd7e0903b3a61220f"></script>
                     </div>
                 </div>
+            </div>
 
-            </div>-->
         </div>
     </div>
 
-    <div class="container z-depth-1-half">
+    <div class="container z-depth-1-half" style="padding-bottom: 20px; padding-left: 10px; padding-right: 10px">
         <h1 class="center" style="font-weight: 600; font-size: 4em; padding-top: 3%; padding-left: 5%; color: #008080">Where Having Fun Has A New Meaning</h1>
         <div class="row">
             <div class="col m6 center">
-                <img src="../images/valfes.jpg" style="width: 100%; height: 50%" class="responsive-img" />
+                <img src="../images/valfes.jpg" style="width: 100%; height: 50%" class="responsive-img z-depth-2" />
             </div>
             <div class="col m6 center" style="margin-top: 3%">
                 <img src="../images/Valencianaa.jpg" class="responsive-img" />
@@ -197,13 +197,13 @@
                 <p class="center">Established as a cooperative in 2005, Gentri’s Best operates a medium scale processing center and collects a daily average of 250 liters of carabao’s milk from local raisers. Their products are sold in their own store in General Trias and distributed through Mr. Moo’s dairy stores.</p>
             </div>
             <div class="col m6 center">
-                <img src="../images/kesongputi.jpg" style="width: 100%; height: 50%" class="responsive-img" />
+                <img src="../images/kesongputi.jpg" style="width: 100%; height: 50%" class="responsive-img z-depth-2" />
             </div>
         </div>
 
         <div class="row" style="margin-top: 4%">
             <div class="col m6 center">
-                <img src="../images/valenciana.jpg" style="width: 100%; height: 50%" class="responsive-img" />
+                <img src="../images/valenciana.jpg" style="width: 100%; height: 50%" class="responsive-img z-depth-2" />
             </div>
             <div class="col m6 center" style="margin-top: 3%">
                 <img src="../images/valencianaaa.jpg" class="responsive-img" style="margin-bottom: 4%" />

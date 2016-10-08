@@ -10,8 +10,7 @@
                 <asp:Image ID="EditCityBanner" Style="width: 100%; height: 50%" runat="server" />
                 <center><label>*Current banner of the city</label></center>
                 <br />
-                <asp:FileUpload ID="cityBannerFileUpload" runat="server" CssClass="center dropify" data-max-height="150"
-                    data-min-height="100" data-max-width="1000" data-min-width="900" data-allowed-file-extensions="jpg png"/>
+                <asp:FileUpload ID="cityBannerFileUpload" runat="server" CssClass="center dropify" data-allowed-file-extensions="jpg png"/>
                 <asp:Button ID="btnUploadBanner" Text="Upload and Save" runat="server" CssClass="waves-effect waves-light btn green" Style="margin-top: 25px" OnClick="UploadBannerButton_Click" />
             </div>
         </div>
@@ -24,7 +23,7 @@
                 
                 <br />
                 <asp:FileUpload ID="cityLogoFileUpload" runat="server" CssClass="center dropify" data-allowed-file-extensions="jpg png"
-                    data-min-height="1024" data-max-height="2050" data-min-width="1024" data-max-width="2050" data-allowed-formats="square"/>
+                     data-allowed-formats="square"/>
                 <asp:Button ID="btnUploadLogo" Text="Upload and Save" runat="server" CssClass="waves-effect waves-light btn green"  Style="margin-top: 25px; margin-bottom: 25px" OnClick="UploadLogoButton_Click" />
             </div>
         </div>

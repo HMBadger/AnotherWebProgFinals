@@ -74,7 +74,6 @@
                                     </td>
                                     <td class="center">
                                         <asp:TextBox ID="txtDetails" runat="server" Text='<%# Bind("Announce_Details") %>'></asp:TextBox>
-                                        <asp:HtmlEditorExtender ID="HtmlEditorDetails" runat="server" TargetControlID="txtDetails" EnableSanitization="false"></asp:HtmlEditorExtender>
                                     </td>
                                     <td class="center">
                                         <asp:Button ID="UpdateButton" runat="server" class="waves-effect green btn center-align" CommandName="Update" Text="Update" />
@@ -106,7 +105,6 @@
                     </div>
                     <div class="col s12" style="padding-left: 5%; padding-right: 5%">
                         <asp:TextBox ID="Announce_Details" TextMode="MultiLine" CssClass="materialize-textarea" runat="server" /><br />
-                        <asp:HtmlEditorExtender ID="HtmlEditorAddDetails" runat="server" TargetControlID="Announce_Details" EnableSanitization="false"></asp:HtmlEditorExtender>
                     </div>
 
                     <div class="col s12">

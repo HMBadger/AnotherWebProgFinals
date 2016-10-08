@@ -50,11 +50,11 @@ namespace AnotherWebProgFinals
                 cmd.Parameters.AddWithValue("@username", UserName.Value);
                 cmd.Parameters.AddWithValue("@userpassword", UserPassword.Value);
                 connection.Open();
-                Session["Admin"] = UserName.Value;
+                //Session["Admin"] = UserName.Value;
                 result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
-                    Response.Redirect("~/Administrator/dashboard.aspx");
+                    Response.Redirect("~/Administrator/mission_vision.aspx");
                 }
                 else
                 {

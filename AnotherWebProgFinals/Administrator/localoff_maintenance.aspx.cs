@@ -17,7 +17,25 @@ namespace AnotherWebProgFinals.Administrator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string queryString = "SELECT strImagePath from dbo.CityOfficials";
+            using(SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["webprog"].ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, conn);
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        string imagePath = "../" + (String)reader["strImagePath"];
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
 
+                }
+            }
         }
 
         protected void AddButton_Click(object sender, EventArgs e)

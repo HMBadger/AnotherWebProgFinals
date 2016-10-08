@@ -29,7 +29,7 @@
         <header id="header" class="page-topbar">
             <!--header nav-->
             <div class="navbar-fixed">
-                <nav style="background: url(../images/headd.jpg)">
+                <nav class="green">
                     <div class="nav-wrapper">
                         <strong>
                             <h1 class="logo-wrapper" style="font-family: Satisfy; padding-left: 5%">
@@ -46,7 +46,6 @@
 
                             <li><a href="localofficials.aspx" class="black-text"><i class="mdi-social-group left"></i>Officials</a></li>
                             <li><a href="directory.aspx" class="black-text"><i class="mdi-notification-phone-in-talk left"></i>Department Directory</a></li>
-                            <li><a href="#!" class="black-text"><i class="mdi-maps-map left"></i>Barangays</a></li>
 
                         </ul>
                         <ul id="drpdwn_tourism" class="center dropdown-content z-depth-2" style="min-width: 250px; display: inline-block; padding-top: 1%; padding-bottom: 1%; background-color: #FFFFFF" data-constrainwidth="false">
@@ -55,7 +54,6 @@
                             <li><a href="tourism_festivities.aspx" class="black-text"><i class="mdi-action-toc left"></i>Festivities</a></li>
                             <li><a href="tourism_foods.aspx" class="black-text"><i class="mdi-action-toc left"></i>Get To Know GTC</a></li>
                             <li><a href="tourism_1town1product.aspx" class="black-text"><i class="mdi-action-toc left"></i>One Town, One Product</a></li>
-
                         </ul>
 
                         <ul class="right hide-on-med-and-down">
@@ -69,12 +67,6 @@
                             <li><a href="#!" class="dropdown-button white-text" data-activates="drpdwn_tourism">
                                 <!--<i class="mdi-action-home"></i>-->
                                 Tourism</a></li>
-                            <li><a href="#!" class="white-text">
-                                <!--<i class="mdi-action-home"></i>-->
-                                Contact Us</a></li>
-                            <li><a href="#!" class="white-text">
-                                <!--<i class="mdi-action-home"></i>-->
-                                Log in</a></li>
                         </ul>
                         <!--search box-->
                         <!--<div class="right header-search-wrapper hide-on-med-and-down" hidden>
@@ -100,7 +92,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-        <footer class="page-footer" style="background: url(../images/headd.jpg)">
+        <footer class="page-footer green">
             <!--style="background-color:#32CD32" -->
             <div class="container">
                 <div class="row">
@@ -109,24 +101,6 @@
                         <p class="grey-text text-lighten-4">Situated at the northern part of the province and is located 14°23′ latitude and 121°53′ longitude. The distance from the Provincial Capitol in Trece Martires City is 18.27 km.</p>
 
 
-                    </div>
-                    <div class="col l3 s12" style="padding-top: 1.5%">
-                        <h5 class="white-text">Settings</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s12" style="padding-top: 1.5%">
-                        <h5 class="white-text">Connect</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

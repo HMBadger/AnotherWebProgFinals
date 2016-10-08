@@ -58,15 +58,6 @@ namespace AnotherWebProgFinals.Administrator {
         protected global::System.Web.UI.WebControls.TextBox Announce_Details;
         
         /// <summary>
-        /// HtmlEditorAddDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.HtmlEditorExtender HtmlEditorAddDetails;
-        
-        /// <summary>
         /// AddButton control.
         /// </summary>
         /// <remarks>

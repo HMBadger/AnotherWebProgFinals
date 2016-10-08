@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container z-depth-1-half">
+    <div class="container z-depth-1-half" style="padding-bottom: 20px">
         <h1 class="center" style="font-weight: 600; font-size: 4em; padding-top: 3%; padding-left: 5%; color: #008080">Demographics</h1>
         <div class="row">
             <div class="col m6 center">
                 <img src="../images/parishchurch.jpg" style="width: 100%; height: 50%" class="responsive-img" />
             </div>
             <div class="col m6 center" style="margin-top: 3%">
-                <h4>Religion</h4>
+                <h4 class="center" style="font-weight: 600; color: #008080">Religion</h4>
                 <p class="center">A vast majority of General Trias residents are Roman Catholics. Protestant Christians accounts for the second largest denomination in the city, with the United Church of Christ in the Philippines, having local churches in the area such as UCCP Buenavista, UCCP Sulukan, UCCP Pasong Kawayan and UCCP Tejero. The Iglesia ni Cristo (INC) has a small but key presence in the city except in Barangay F. Manalo (named after the first INC executive minister), where most residents are INC members.</p>
                 <br />
-                <h4>Language</h4>
+                <h4 class="center" style="font-weight: 600; color: #008080">Language</h4>
                 <p class="center">General Trias is one of the Hispanic towns in the Philippines because of these Spanish speakers are present in the town . Filipino , English and Spanish are the most used language in the area specially in Buenavista (also known as Camaren) because this has been the hide out of the Spaniards during their era.</p>
             </div>
         </div>
@@ -63,7 +63,7 @@
                 </table>
             </div>
             <div class="col m6 center">
-                <h4>Population</h4>
+                <h4 class="center" style="font-weight: 600; color: #008080">Population</h4>
                 <p class="center">The municipality of General Trias registered a total population of 107,691 in 2000. From 66,837 in 1995, 
                     it increased by around 61.12% over a 5-year period. The present annual growth rate is 10% as compared to the past census year, 
                     with only 4.80% indicating that it has more than doubled in five (5) years.The population is distributed in its thirty three (33) barangays and is 

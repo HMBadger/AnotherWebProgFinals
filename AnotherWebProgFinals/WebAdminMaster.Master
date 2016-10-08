@@ -26,11 +26,11 @@
         <header id="header" class="page-topbar">
             <!-- start header nav-->
             <div class="navbar-fixed">
-                <nav style="background: url(../images/headd.jpg)">
+                <nav class="green">
                     <div class="nav-wrapper">
                         <ul class="left">
                             <li>
-                                <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1 center"><strong>City of General Trias - Maintenance</strong></a></h1>
+                                <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><strong>City of General Trias - Maintenance</strong></a></h1>
                             </li>
                         </ul>
                     </div>
@@ -51,19 +51,13 @@
                                 </div>
                                 <div class="col col s8 m8 l8">
                                     <ul id="profile-dropdown" class="dropdown-content" style="color: green">
-                                        <li><a href="#"><i class="mdi-action-face-unlock"></i>Profile</a>
-                                        </li>
-                                        <li><a href="#"><i class="mdi-action-settings"></i>Settings</a>
-                                        </li>
-                                        <li><a href="#"><i class="mdi-communication-live-help"></i>Help</a>
-                                        </li>
-                                        <li class="divider"></li>
                                         <li><a href="#"><i class="mdi-action-lock-outline"></i>Lock</a>
                                         </li>
                                         <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i>Logout</a>
                                         </li>
                                     </ul>
-                                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">
+                                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label><i class="mdi-navigation-arrow-drop-down right"></i></a>
                                     <p class="user-roal">Administrator</p>
                                 </div>
                             </div>
@@ -73,7 +67,6 @@
                         <li class="li-hover">
                             <p class="ultra-small margin more-text">Essentials</p>
                         </li>
-                        <li class="bold"><a href="dashboard.aspx" class="waves-effect waves-cyan"><i class="mdi-action-home"></i>Dashboard</a></li>
                         <li class="bold"><a href="mission_vision.aspx" class="waves-effect waves-cyan"><i class="mdi-image-dehaze"></i>Mission and Vision</a></li>
                         <li class="bold"><a href="logo_banner.aspx" class="waves-effect waves-cyan"><i class="mdi-image-loupe"></i>Banner and Logo</a></li>
                         <li class="li-hover">
@@ -83,7 +76,6 @@
                         <li class="bold"><a href="event_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-format-list-bulleted"></i>Events</a></li>
                         <li class="bold"><a href="ann_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i>Announcements</a></li>
                         <li class="bold"><a href="localoff_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-av-recent-actors"></i>City Officials</a></li>
-                        <li class="bold"><a href="directory_maintenance.aspx" class="waves-effect waves-cyan"><i class="mdi-maps-local-phone"></i>Directory</a></li>
                     </ul>
                 </aside>
                 <section id="content">

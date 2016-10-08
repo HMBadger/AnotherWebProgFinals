@@ -157,6 +157,18 @@
     <Content Include="font\dropify\dropify.ttf" />
     <Content Include="font\dropify\dropify.woff" />
     <Content Include="font\Satisfy\Satisfy-Regular.ttf" />
+    <Content Include="pdf_files\2015-MUNICIPAL-ORDINANCE-No.-15-01.pdf" />
+    <Content Include="pdf_files\2015-MUNICIPAL-ORDINANCE-No.-15-02.pdf" />
+    <Content Include="pdf_files\General-Trias-Sports-Complex-Cultural-and-Convention-Center-and-Sports-Park-Rates-Fees-Ordinance.pdf" />
+    <Content Include="pdf_files\MUNICIPAL-ORDINANCE-No.-13-12.pdf" />
+    <Content Include="pdf_files\MUNICIPAL-ORDINANCE-No.-13-13.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-01.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-02.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-03.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-04.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-05.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-07.pdf" />
+    <Content Include="pdf_files\Municipal-Ordinance-No.-14-101.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +177,7 @@
     </None>
     <Content Include="User\directory.aspx" />
     <Content Include="User\history_para.aspx" />
+    <Content Include="User\legislation.aspx" />
     <Content Include="User\localofficials.aspx" />
     <Content Include="User\Municipal_Profile.aspx" />
     <Content Include="User\tourism_1town1product.aspx" />
@@ -272,6 +285,13 @@
     </Compile>
     <Compile Include="User\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\legislation.aspx.cs">
+      <DependentUpon>legislation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\legislation.aspx.designer.cs">
+      <DependentUpon>legislation.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\localofficials.aspx.cs">
       <DependentUpon>localofficials.aspx</DependentUpon>

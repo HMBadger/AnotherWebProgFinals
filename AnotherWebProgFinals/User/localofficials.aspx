@@ -41,7 +41,7 @@
                         <center><p class="center" style="font-weight: 600; color:#388E3C; font-size:20px"><%# Eval("strPosition") %></p></center>
                         <div class="divider" style="height: 3px"></div>
                         <br />
-                        <br />
+                        <%--<br />--%>
                         <p class="center"><%# Eval("strPositionDesc") %></p>
                         <p class="center"><%# Eval("strAdditionalDetails") %></p>
                     </div>
