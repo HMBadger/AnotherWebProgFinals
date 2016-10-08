@@ -18,3 +18,9 @@ it is a bug of the Materialize Framework.===
 <!--USER VIEW-->
 1. Type localhost:xxxxxx/User/index.aspx to the address bar
 
+
+SUBMITTED BY:
+
+ARIANNE GRACE LABTIC - PROGRAMMER
+HONEY MAY BUENAVIDES - DESIGNER
+RYAN CHRISTIAN PIZARRA - DESIGNER
