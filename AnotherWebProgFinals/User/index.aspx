@@ -123,7 +123,7 @@
             </ul>
 
             <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
-                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDate, Events_EndDate, Events_Details FROM [CityEvents] ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
+                SelectCommand="SELECT TOP 5 EventsID, Events_Title, Events_StartDate, Events_EndDate, Events_Details FROM [CityEvents] WHERE Events_IsActive = 1 ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
 
         </div>
     </div>

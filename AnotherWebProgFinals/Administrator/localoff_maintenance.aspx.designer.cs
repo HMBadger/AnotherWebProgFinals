@@ -13,12 +13,75 @@ namespace AnotherWebProgFinals.Administrator {
     public partial class localoff_maintenance {
         
         /// <summary>
-        /// tblBody control.
+        /// CityOfficialsDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tblBody;
+        protected global::System.Web.UI.WebControls.SqlDataSource CityOfficialsDataSource;
+        
+        /// <summary>
+        /// OfficialsListView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView OfficialsListView;
+        
+        /// <summary>
+        /// strFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox strFullName;
+        
+        /// <summary>
+        /// strPosition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox strPosition;
+        
+        /// <summary>
+        /// strPositionDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox strPositionDesc;
+        
+        /// <summary>
+        /// strAdditionalDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox strAdditionalDetails;
+        
+        /// <summary>
+        /// cityOfficialFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload cityOfficialFileUpload;
+        
+        /// <summary>
+        /// AddButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddButton;
     }
 }
