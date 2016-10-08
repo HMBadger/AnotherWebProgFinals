@@ -41,7 +41,7 @@
 
                             <li><a href="history_para.aspx" class="black-text"><i class="mdi-action-account-balance left"></i>City History</a></li>
                             <li><a href="Municipal_Profile.aspx" class="black-text"><i class="mdi-action-toc left"></i>Municipal Profile</a></li>
-                            <li><a href="#!" class="black-text"><i class="mdi-maps-local-library left"></i>Legislation</a></li>
+                            <li><a href="legislation.aspx" class="black-text"><i class="mdi-maps-local-library left"></i>Legislation</a></li>
 
 
                             <li><a href="localofficials.aspx" class="black-text"><i class="mdi-social-group left"></i>Officials</a></li>

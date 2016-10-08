@@ -6,14 +6,13 @@
     <div class="container">
         <div class="section">
             <h1 style="color: #38833C; font-weight: 600" class="center">ANNOUNCEMENT</h1>
-
             <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
                 <ItemTemplate>
                     <div class="row">
-                        <div class="col m12">
+                        <div class="col m12 center">
                             <div id="blog-post-full">
                                 <div class="card large">
-                                    <div class="card-image">
+                                    <div class="card-image" style="background-color: #38833C">
                                         <img src="../images/background2.jpg" alt="sample">
                                         <span class="card-title"><%#Eval("Announce_Title") %></span><br />
                                     </div>
@@ -35,6 +34,7 @@
                     <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO ANNOUNCEMENTS TO SHOW</h4>
                 </EmptyDataTemplate>
             </asp:ListView>
+
 
            
 
