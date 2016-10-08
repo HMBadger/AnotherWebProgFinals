@@ -53,7 +53,6 @@
                             <li><a href="tourism_landmarks.aspx" class="black-text"><i class="mdi-action-account-balance left"></i>Landmarks</a></li>
                             <li><a href="tourism_festivities.aspx" class="black-text"><i class="mdi-action-toc left"></i>Festivities</a></li>
                             <li><a href="tourism_foods.aspx" class="black-text"><i class="mdi-action-toc left"></i>Get To Know GTC</a></li>
-                            <li><a href="tourism_1town1product.aspx" class="black-text"><i class="mdi-action-toc left"></i>One Town, One Product</a></li>
                         </ul>
 
                         <ul class="right hide-on-med-and-down">

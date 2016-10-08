@@ -60,7 +60,7 @@
                                             <center><%# Eval("strAdditionalDetails").ToString().Replace(Environment.NewLine,"<br />") %></center>
                                         </td>
                                         <td class="center">
-                                            <center><img id="strOfficialImagePath" runat="server" width="150" height="150"  src='<%# Eval("strImagePath") %>' /></center>
+                                            <center><img id="strOfficialImagePath" runat="server" width="150" height="150"  src=' <%# "../"+Eval("strImagePath") %>' /></center>
                                         </td>
                                         <td>
                                             <asp:Button ID="EditButton" class="waves-effect blue lighten-1 btn-floating center-align mdi-editor-border-color" runat="server" CommandName="Edit" />

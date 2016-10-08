@@ -137,7 +137,7 @@
                     <asp:SqlDataSource ID="CityMissionDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:webprog %>" SelectCommand="SELECT [txtMission], [txtVision] FROM [CityMission], [CityVision]"></asp:SqlDataSource>
                     <asp:FormView ID="CityMissionFormView" runat="server" DataSourceID="CityMissionDataSource">
                         <ItemTemplate>
-                            <div class="card green z-depth-2" style="margin-top: 9%; padding-bottom: 6%">
+                            <div class="card green z-depth-2" style="margin-top: 15%; padding-bottom: 6%">
                                 <div class="card-content white-text">
                                     <h1 class="card-title center" style="font-weight: 600; font-size: 3em;">MISSION</h1>
                                     <p style="text-align: center" class="center">
@@ -154,7 +154,7 @@
                     </asp:FormView>
                 </div>
                 <div class="col m6 s12 center animated fadeInRight">
-                    <h1>Featured Video</h1>
+                    <h1 class="center" style="font-weight: 600; font-size: 4em; padding-top: 3%; padding-left: 5%; color: #008080">Featured Video</h1>
                     <video controls style="width: 100%">
                         <source src="../images/aerial.mp4" type="video/mp4" />
                     </video>

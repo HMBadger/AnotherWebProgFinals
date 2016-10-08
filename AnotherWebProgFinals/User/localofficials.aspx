@@ -22,11 +22,15 @@
                     <div class="col s6 m6" style="min-height: 10%; max-height: 20%">
                         <div class="card horizontal" style="height: 500px; width: 400px">
                             <div class="card-image">
-                                <asp:Image ID="strOfficialImagePath" ImageUrl='../<%# Eval("strImagePath") %>' runat="server" class="responsive-img"></asp:Image>
+
+                                <img id="strOfficialImagePath" src='../<%# "../" + Eval("strImagePath") %>' class="responsive-img" />
                             </div>
                             <div class="card-stacked">
                                 <div class="center card-content">
-                                    <span class="card-title activator grey-text text-darken-4"><b></b><!--<i class="mdi-navigation-more-vert right"></i>--></span><br />
+                                    <span class="card-title activator grey-text text-darken-4"><b></b>
+                                        <!--<i class="mdi-navigation-more-vert right"></i>-->
+                                    </span>
+                                    <br />
                                     <span style="font-weight: 600; color: #388E3C"></span>
                                 </div>
                                 <div class="card-reveal">
@@ -58,11 +62,14 @@
                     <div class="col s6 m6" style="min-height: 10%; max-height: 20%">
                         <div class="card horizontal" style="height: 500px; width: 400px">
                             <div class="card-image">
-                                <img id="strOfficialImagePath" runat="server" src='<%# Eval("strImagePath") %>' class="responsive-img" />
+                                <img id="strOfficialImagePath" runat="server" src='<%# "../" + Eval("strImagePath") %>' class="responsive-img" />
                             </div>
                             <div class="card-stacked">
                                 <div class="center card-content">
-                                    <span class="card-title activator grey-text text-darken-4"><b></b><!--<i class="mdi-navigation-more-vert right"></i>--></span><br />
+                                    <span class="card-title activator grey-text text-darken-4"><b></b>
+                                        <!--<i class="mdi-navigation-more-vert right"></i>-->
+                                    </span>
+                                    <br />
                                     <span style="font-weight: 600; color: #388E3C"></span>
                                 </div>
                                 <div class="card-reveal">
@@ -94,28 +101,26 @@
                 <div class="col m4">
                     <asp:ListView ID="ListView2" runat="server" DataSourceID="ViewingSGPDataSource">
                         <LayoutTemplate>
-                            <table>
-                                <tr>
+                            <div class="row">
+                                <div class="col m12">
                                     <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
-                                </tr>
-                            </table>
+                                </div>
+                            </div>
                         </LayoutTemplate>
                         <ItemTemplate>
-                            <td>
-                                <div class="card medium" style="height: 30%">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img id="strOfficialImagePath" runat="server" src='<%# Eval("strImagePath") %>' />
-                                    </div>
-                                    <div class="card-content">
-                                        <span class="card-title activator grey-text text-darken-4">Hon. <%# Eval("strFullName") %><i class="mdi-navigation-more-vert right"></i></span><br />
-                                        <span style="font-weight: 600; color: #388E3C"><%# Eval("strPositionDesc") %></span>
-                                    </div>
-                                    <div class="card-reveal">
-                                        <span class="card-title grey-text text-darken-4">Hon. <%# Eval("strFullName") %><i class="mdi-navigation-close right"></i></span>
-                                        <p><%# Eval("strAdditionalDetails") %></p>
-                                    </div>
+                            <div class="card medium" style="height: 30%">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img id="strOfficialImagePath" runat="server" src='<%# "../" + Eval("strImagePath") %>' />
                                 </div>
-                            </td>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4">Hon. <%# Eval("strFullName") %><i class="mdi-navigation-more-vert right"></i></span><br />
+                                    <span style="font-weight: 600; color: #388E3C"><%# Eval("strPositionDesc") %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Hon. <%# Eval("strFullName") %><i class="mdi-navigation-close right"></i></span>
+                                    <p><%# Eval("strAdditionalDetails") %></p>
+                                </div>
+                            </div>
                         </ItemTemplate>
                     </asp:ListView>
                 </div>
