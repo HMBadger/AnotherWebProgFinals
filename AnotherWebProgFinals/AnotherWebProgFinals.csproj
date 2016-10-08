@@ -170,13 +170,10 @@
     <Content Include="User\tourism_1town1product.aspx" />
     <Content Include="User\tourism_festivities.aspx" />
     <Content Include="User\tourism_foods.aspx" />
-    <Content Include="User\tourism_historical.aspx" />
     <Content Include="User\tourism_landmarks.aspx" />
-    <Content Include="User\tourism_wheretostay.aspx" />
     <Content Include="User\viewAnnouncement.aspx" />
     <Content Include="User\viewEvent.aspx" />
     <Content Include="user_login.aspx" />
-    <Content Include="WebForm1.aspx" />
     <Content Include="WebUserMaster.Master" />
     <Content Include="WebAdminMaster.Master" />
     <Content Include="WebLog.Master" />
@@ -311,26 +308,12 @@
     <Compile Include="User\tourism_foods.aspx.designer.cs">
       <DependentUpon>tourism_foods.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\tourism_historical.aspx.cs">
-      <DependentUpon>tourism_historical.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User\tourism_historical.aspx.designer.cs">
-      <DependentUpon>tourism_historical.aspx</DependentUpon>
-    </Compile>
     <Compile Include="User\tourism_landmarks.aspx.cs">
       <DependentUpon>tourism_landmarks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\tourism_landmarks.aspx.designer.cs">
       <DependentUpon>tourism_landmarks.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User\tourism_wheretostay.aspx.cs">
-      <DependentUpon>tourism_wheretostay.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User\tourism_wheretostay.aspx.designer.cs">
-      <DependentUpon>tourism_wheretostay.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\viewAnnouncement.aspx.cs">
       <DependentUpon>viewAnnouncement.aspx</DependentUpon>
@@ -359,13 +342,6 @@
     </Compile>
     <Compile Include="WebAdminMaster.Master.designer.cs">
       <DependentUpon>WebAdminMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebLog.Master.cs">
       <DependentUpon>WebLog.Master</DependentUpon>

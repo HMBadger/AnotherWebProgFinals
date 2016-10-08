@@ -6,25 +6,41 @@
     <div class="container">
         <div class="section">
             <h1 style="color: #38833C; font-weight: 600" class="center">ANNOUNCEMENT</h1>
-            <div id="blog-post-full">
-                <!-- medium size post-->
-                <div class="card medium">
-                    <div class="card-image">
-                        <!--gagawin na lang na static ung background ng view announcement, so isang kulay na lang para sa lahat-->
-                        <img src="../images/background2.jpg" alt="sample">
-                        <span class="card-title">Suspension of Classes</span><br />
+
+            <asp:ListView ID="AnnouncementsList" runat="server" DataSourceID="ViewingAnnouncementDataSource" DataKeyNames="AnnounceID">
+                <ItemTemplate>
+                    <div class="row">
+                        <div class="col m12">
+                            <div id="blog-post-full">
+                                <div class="card large">
+                                    <div class="card-image">
+                                        <img src="../images/background2.jpg" alt="sample">
+                                        <span class="card-title"><%#Eval("Announce_Title") %></span><br />
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="ultra-small">Posted On: <%#Eval("Announce_DatePosted", "{0:M-dd-yyyy}") %></p>
+                                        <p>
+                                            <%#Eval("Announce_Details") %>
+                                        </p>
+                                    </div>
+                                    <div class="card-action">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p class="ultra-small">September 30, 2016</p>
-                        <p>Due to Typhoon Pikachu, classes are suspended for All Levels (Preschool to College) from Today(September 30, 2016) to October 01, 2016. Please be guided
-                            accordingly.
-                        </p>
-                    </div>
-                    <div class="card-action">
-                        By <a href="index.aspx">Admin Gentri</a>
-                    </div>
-                </div>
-            </div>
+                </ItemTemplate>
+                <EmptyDataTemplate>
+                    <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO ANNOUNCEMENTS TO SHOW</h4>
+                </EmptyDataTemplate>
+            </asp:ListView>
+
+           
+
+            <asp:SqlDataSource ID="ViewingAnnouncementDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
+                SelectCommand="SELECT * FROM [CityAnnouncements] ORDER BY Announce_DatePosted DESC"></asp:SqlDataSource>
+
         </div>
     </div>
 </asp:Content>

@@ -6,37 +6,41 @@
     <div class="container">
         <div class="section">
             <h1 style="color: #38833C; font-weight: 600" class="center">EVENTS</h1>
-            <div id="blog-post-full">
-                <!-- medium size post-->
-                <div class="card large">
-                    <div class="card-image">
-                        <!--gagawin na lang na static ung background ng view announcement, so isang kulay na lang para sa lahat-->
-                        <img src="../images/background2.jpg" alt="sample">
-                        <span class="card-title">Gawad Parangal 2016</span><br />
+
+            <asp:ListView ID="EventsList" runat="server" DataSourceID="ViewingEventsDataSource" DataKeyNames="EventsID">
+                <ItemTemplate>
+
+                    <div class="row">
+                        <div class="col m12">
+                            <div id="blog-post-full">
+                                <div class="card large">
+                                    <div class="card-image">
+                                        <img src="../images/background2.jpg" alt="sample">
+                                        <span class="card-title"><%#Eval("Events_Title") %></span><br />
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="ultra-small">Posted On: <%#Eval("EVents_DatePosted", "{0:M-dd-yyyy}") %>; Will Start On: <%#Eval("Events_StartDate", "{0:M-dd-yyyy}") %>; Will End On: <%#Eval("Events_EndDate", "{0:M-dd-yyyy}") %></p>
+                                        <p>
+                                            <%#Eval("Events_Details") %>
+                                        </p>
+                                    </div>
+                                    <div class="card-action">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p class="ultra-small">September 30, 2016</p>
-                        <p>What:
-                            <!--event name-->
-                        </p>
-                        <p>Who:
-                            <!--participants-->
-                        </p>
-                        <p>When:
-                            <!--date-->
-                        </p>
-                        <p>Where:
-                            <!--place-->
-                        </p>
-                        <p>
-                            <!--dito na yung additional details-->
-                            Gawad Parangal is a Lorem Ipsum Dolor Sit Amet My God Ayaw ko na lol</p>
-                    </div>
-                    <div class="card-action">
-                        By <a href="index.aspx">Admin Gentri</a>
-                    </div>
-                </div>
-            </div>
+
+                </ItemTemplate>
+                <EmptyDataTemplate>
+                    <h4 class="task-card-title center" style="color: dimgray; font-weight: 600">NO EVENTS TO SHOW</h4>
+                </EmptyDataTemplate>
+            </asp:ListView>
+
+            <asp:SqlDataSource ID="ViewingEventsDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:webprog %>"
+                SelectCommand="SELECT * FROM [CityEvents] ORDER BY Events_StartDate DESC"></asp:SqlDataSource>
+
         </div>
     </div>
 </asp:Content>

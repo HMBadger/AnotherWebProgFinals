@@ -87,7 +87,7 @@
                     </EmptyDataTemplate>
                 </asp:ListView>
                 <li class="collection-item">
-                    <h6><a href="#">See more Announcements</a></h6>
+                    <h6><a href="viewAnnouncement.aspx">See more Announcements</a></h6>
                 </li>
             </ul>
         </div>
@@ -118,7 +118,7 @@
                     </EmptyDataTemplate>
                 </asp:ListView>
                 <li class="collection-item">
-                    <h6><a href="#">See more Events</a></h6>
+                    <h6><a href="viewEvent.aspx">See more Events</a></h6>
                 </li>
             </ul>
 

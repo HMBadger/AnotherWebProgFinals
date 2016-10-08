@@ -52,10 +52,8 @@
                         <ul id="drpdwn_tourism" class="center dropdown-content z-depth-2" style="min-width: 250px; display: inline-block; padding-top: 1%; padding-bottom: 1%; background-color: #FFFFFF" data-constrainwidth="false">
 
                             <li><a href="tourism_landmarks.aspx" class="black-text"><i class="mdi-action-account-balance left"></i>Landmarks</a></li>
-                            <li><a href="tourism_historical.aspx" class="black-text"><i class="mdi-maps-local-library left"></i>Historical Places</a></li>
-                            <li><a href="tourism_wheretostay.aspx" class="black-text"><i class="mdi-action-toc left"></i>Where To Stay</a></li>
-                            <li><a href="tourism_foods.aspx" class="black-text"><i class="mdi-action-toc left"></i>Foods To Eat</a></li>
                             <li><a href="tourism_festivities.aspx" class="black-text"><i class="mdi-action-toc left"></i>Festivities</a></li>
+                            <li><a href="tourism_foods.aspx" class="black-text"><i class="mdi-action-toc left"></i>Get To Know GTC</a></li>
                             <li><a href="tourism_1town1product.aspx" class="black-text"><i class="mdi-action-toc left"></i>One Town, One Product</a></li>
 
                         </ul>
