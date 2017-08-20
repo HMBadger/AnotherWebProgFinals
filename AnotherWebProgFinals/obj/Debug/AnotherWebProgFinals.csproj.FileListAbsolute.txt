@@ -68,3 +68,26 @@ C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\bin\Mi
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.csprojResolveAssemblyReference.cache
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.dll
 C:\Users\rypzr\Documents\GitHub\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.pdb
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\csc.exe
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\vbc.exe
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\VBCSCompiler.exe
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.dll.config
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\AnotherWebProgFinals.pdb
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.pdb
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\HtmlAgilityPack.xml
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.csprojResolveAssemblyReference.cache
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.dll
+C:\Users\rypzr\Documents\GitHub\.NET Frameworks\AnotherWebProgFinals\AnotherWebProgFinals\obj\Debug\AnotherWebProgFinals.pdb
